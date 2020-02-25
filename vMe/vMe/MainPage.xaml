@@ -6,9 +6,48 @@
              mc:Ignorable="d"
              x:Class="vMe.MainPage">
 
-    <StackLayout>
-        <Label Text="Test" VerticalOptions="CenterAndExpand" HorizontalOptions="Center"></Label>
-        <Image VerticalOptions="CenterAndExpand" Source="Logo" HorizontalOptions="Center"></Image>
+    <StackLayout BackgroundColor="Gray">
+        <StackLayout VerticalOptions="EndAndExpand" HorizontalOptions="FillAndExpand" Padding="0" Margin="0">
+            <Image Source="idle_robot" VerticalOptions="CenterAndExpand"
+                   WidthRequest="300"></Image>
+
+        </StackLayout>
+        <StackLayout VerticalOptions="CenterAndExpand"
+                     BackgroundColor="Green"
+                     HeightRequest="200" Padding="0" Margin="0">
+
+               <Grid>
+                  <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                  </Grid.RowDefinitions>
+                  <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                  </Grid.ColumnDefinitions>
+                   <StackLayout VerticalOptions="CenterAndExpand"
+                     BackgroundColor="Green"
+                     HeightRequest="200" Padding="0" Margin="0">
+
+                   </StackLayout>
+
+                   <RelativeLayout BackgroundColor="Blue" Grid.Row="0" Grid.Column="0">
+
+                   </RelativeLayout>
+
+                   <RelativeLayout BackgroundColor="Red" Grid.Row="0" Grid.Column="1">
+
+                   </RelativeLayout>
+
+                   <RelativeLayout BackgroundColor="Yellow" Grid.Row="0" Grid.Column="2">
+
+                   </RelativeLayout>
+
+                </Grid>
+
+
+
+        </StackLayout>
     </StackLayout>
+
+
 
 </ContentPage>

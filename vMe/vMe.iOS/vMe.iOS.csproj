@@ -73,49 +73,32 @@
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json">
       <Visible>false</Visible>
     </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon1024.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon180.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon167.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon152.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon120.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon87.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon80.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon76.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon60.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon58.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon40.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon29.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon20.png">
-      <Visible>false</Visible>
-    </ImageAsset>
     <ImageAsset Include="Assets.xcassets\Logo.imageset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\Logo.imageset\Logo.png" />
     <ImageAsset Include="Assets.xcassets\Logo.imageset\Logo%402x.png" />
     <ImageAsset Include="Assets.xcassets\Logo.imageset\Logo%403x.png" />
+    <ImageAsset Include="Assets.xcassets\idle_robot.imageset\Asset 1.png" />
+    <ImageAsset Include="Assets.xcassets\idle_robot.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\idle_robot.imageset\idle_robot.png" />
+    <ImageAsset Include="Assets.xcassets\idle_robot.imageset\idle_robot-1.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\icon-2.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\icon-3.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Notification%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Notification%403x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Notification.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\29pt.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\29pt-1.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\29pt-2.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\29pt-3.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\40pt.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\40pt-1.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\40pt-2.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\60pt.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\60pt-1.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\76pt.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\76pt-1.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\83.5pt.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\1024pt.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -138,5 +121,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Assets.xcassets\Logo.imageset\" />
+    <Folder Include="Assets.xcassets\idle_robot.imageset\" />
   </ItemGroup>
 </Project>
