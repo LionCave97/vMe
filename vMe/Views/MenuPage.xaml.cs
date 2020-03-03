@@ -20,8 +20,8 @@ namespace vMe.Views
 
             menuItems = new List<HomeMenuItem>
             {
-                new HomeMenuItem {Id = MenuItemType.Robot, Title="Robot"},
-                new HomeMenuItem {Id = MenuItemType.Browse, Title="Browse" },
+                new HomeMenuItem {Id = MenuItemType.Robot, Title="Main"},
+                new HomeMenuItem {Id = MenuItemType.Profile, Title="Profile" },
                 new HomeMenuItem {Id = MenuItemType.About, Title="About" }
                 
             };
@@ -38,5 +38,7 @@ namespace vMe.Views
                 await RootPage.NavigateFromMenu(id);
             };
         }
+
+       
     }
 }

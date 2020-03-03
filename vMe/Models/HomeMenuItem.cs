@@ -8,7 +8,8 @@ namespace vMe.Models
     {
         Browse,
         About,
-        Robot
+        Robot,
+        Profile
     }
     public class HomeMenuItem
     {

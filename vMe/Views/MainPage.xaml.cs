@@ -33,8 +33,8 @@ namespace vMe.Views
                     case (int)MenuItemType.Robot:
                         MenuPages.Add(id, new NavigationPage(new RobotPage()));
                         break;
-                    case (int)MenuItemType.Browse:
-                        MenuPages.Add(id, new NavigationPage(new ItemsPage()));
+                    case (int)MenuItemType.Profile:
+                        MenuPages.Add(id, new NavigationPage(new ProfilePage()));
                         break;
                     case (int)MenuItemType.About:
                         MenuPages.Add(id, new NavigationPage(new AboutPage()));
