@@ -4,7 +4,6 @@ using System.ComponentModel;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-
 using vMe.Models;
 
 namespace vMe.Views
@@ -18,8 +17,8 @@ namespace vMe.Views
         public MainPage()
         {
             InitializeComponent();
-
-            MasterBehavior = MasterBehavior.Popover;
+            
+            
 
             //MenuPages.Add((int)MenuItemType.Browse, (NavigationPage)Detail);
         }
