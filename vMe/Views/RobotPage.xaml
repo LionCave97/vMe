@@ -1,5 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="vMe.Views.RobotPage">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:vMe.Views"
+             x:Class="vMe.Views.RobotPage">
     <ContentPage.Content>
         <StackLayout BackgroundColor="#2e86ab">
         <StackLayout VerticalOptions="EndAndExpand" HorizontalOptions="FillAndExpand" Padding="0" Margin="0, 0, 0, 40">
@@ -7,57 +9,7 @@
                    HeightRequest="440"></Image>
 
         </StackLayout>
-        <StackLayout 
-                     HeightRequest="200" Padding="0" 
-                     BackgroundColor="#2d3047" HorizontalOptions="End">
-
-               <Grid>
-                  <Grid.RowDefinitions>
-                    <RowDefinition Height="*" />
-                  </Grid.RowDefinitions>
-                  <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*" />
-                  </Grid.ColumnDefinitions>
-                   <StackLayout VerticalOptions="CenterAndExpand"
-                     HeightRequest="200" Padding="0" >
-
-                   </StackLayout>
-
-                   <RelativeLayout BackgroundColor="#F2E74B" Grid.Row="0" Grid.Column="0"
-                                   WidthRequest="110" VerticalOptions="CenterAndExpand"
-                                   Margin="10, 20, 0, 0" HeightRequest="180">
-                       <Image Source="waterDrop"
-                              VerticalOptions="CenterAndExpand"
-                              HorizontalOptions="EndAndExpand"
-                              Margin="6, 40, 0, 20" WidthRequest="100">
-                              </Image>
-                   </RelativeLayout>
-
-                   <RelativeLayout BackgroundColor="#ff220c" Grid.Row="0" Grid.Column="1"
-                                   WidthRequest="110" VerticalOptions="CenterAndExpand"
-                                   Margin=" 5, 20, 5, 0" HeightRequest="180">
-                       <Image Source="runningMan"
-                              VerticalOptions="CenterAndExpand"
-                              HorizontalOptions="EndAndExpand"
-                              Margin="3, 40, 3, 20" WidthRequest="100">
-                              </Image>
-                   </RelativeLayout>
-
-                   <RelativeLayout BackgroundColor="#f4f1de" Grid.Row="0" Grid.Column="2"
-                                   WidthRequest="110" VerticalOptions="CenterAndExpand"
-                                   Margin="0, 20, 10, 0" HeightRequest="180">
-                       <Image Source="battery"
-                              VerticalOptions="CenterAndExpand"
-                              HorizontalOptions="EndAndExpand"
-                              Margin="6, 40, 0, 20" WidthRequest="100">
-                              </Image>
-                   </RelativeLayout>
-
-                </Grid>
-
-
-
-        </StackLayout>
+            <local:ActivityDock></local:ActivityDock>
     </StackLayout>
     </ContentPage.Content>
 </ContentPage>

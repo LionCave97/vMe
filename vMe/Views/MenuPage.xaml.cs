@@ -18,7 +18,7 @@ namespace vMe.Views
         {
             InitializeComponent();
 
-            menuItems = new List<HomeMenuItem>
+            menuItems = new List<HomeMenuItem >
             {
                 new HomeMenuItem {Id = MenuItemType.Robot, Title="Main"},
                 new HomeMenuItem {Id = MenuItemType.Profile, Title="Profile" },
