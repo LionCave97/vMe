@@ -46,6 +46,12 @@ namespace vMe.Views
             StartTime();
         }
 
+        public void EnergyFull()
+        {
+            batteryLabel.Text = "Battery is full!";            
+            Console.WriteLine("Battery is full!!!")
+        }
+
         private void updateTimedData(object sender, ElapsedEventArgs e)
         {
             TimeSpan timeElapsed = e.SignalTime - timeKeeper.StartTime;

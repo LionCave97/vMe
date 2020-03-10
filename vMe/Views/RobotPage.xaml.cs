@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Threading.Tasks;
 using Xamarin.Forms.Xaml;
 using vMe.Models;
+using vMe.Services;
 
 using Xamarin.Forms;
 
@@ -14,6 +15,7 @@ namespace vMe.Views
         public RobotPage()
         {
             InitializeComponent();
+
         }
     }
 }

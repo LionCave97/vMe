@@ -14,9 +14,9 @@ namespace vMe.Views
         {
             get
             {
-                if (App.Current.Properties.ContainsKey(startTimeKey))
+                if (Application.Current.Properties.ContainsKey(startTimeKey))
                 {
-                    return new DateTime((long)App.Current.Properties[startTimeKey]);
+                    return new DateTime((long)Application.Current.Properties[startTimeKey]);
                 }
                 else
                 {
@@ -26,7 +26,7 @@ namespace vMe.Views
 
             set
             {
-                App.Current.Properties[startTimeKey] = value.Ticks;
+                Application.Current.Properties[startTimeKey] = value.Ticks;
             }
         }
 
@@ -34,9 +34,9 @@ namespace vMe.Views
         {
             get
             {
-                if (App.Current.Properties.ContainsKey(storedTimeKey))
+                if (Application.Current.Properties.ContainsKey(storedTimeKey))
                 {
-                    return new DateTime((long)App.Current.Properties[storedTimeKey]);
+                    return new DateTime((long)Application.Current.Properties[storedTimeKey]);
                 }
                 else
                 {
@@ -46,7 +46,7 @@ namespace vMe.Views
 
             set
             {
-                App.Current.Properties[storedTimeKey] = value.Ticks;
+                Application.Current.Properties[storedTimeKey] = value.Ticks;
             }
         }
 
