@@ -1,21 +1,60 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using Xamarin.Forms;
+using vMe.Views;
+using vMe.Services;
+using System.Timers;
 
 namespace vMe.Views
 {
+    [DesignTimeVisible(false)]
     public partial class ActivityDock : ContentView
     {
+        private TimeKeeper timeKeeper = new TimeKeeper();
+
+        private static Timer timer;
+
         bool waterTappedState = false;
         bool runningTappedState = false;
         bool batteryTappedState = false;
         public ActivityDock()
         {
             InitializeComponent();
+
+            StartTime();
+        }
+
+        private void StartTime()
+        {
+            timer = new Timer();
+
+            timer.Interval = 1000;
+            timer.Enabled = true;
+            timer.Elapsed += updateTimedData;
+            timer.Start();
+
+        }
+
+        private void ResetTimer()
+        {
+            timeKeeper.StartTime = DateTime.Now;
+
+            StartTime();
+        }
+
+        private void updateTimedData(object sender, ElapsedEventArgs e)
+        {
+            TimeSpan timeElapsed = e.SignalTime - timeKeeper.StartTime;
+                        
         }
 
         void waterTapped(System.Object sender, System.EventArgs e)
         {
+            Console.WriteLine(timeKeeper.GetTimeElapsed());
             Console.WriteLine("Tapped");
             if (waterTappedState)
             {
@@ -27,7 +66,9 @@ namespace vMe.Views
                 runningLevel.IsVisible = true;
                 batteryLevel.IsVisible = true;
 
-                waterMenu.IsVisible = false;
+                waterLevel.LowerChild(waterDropPic);
+                waterLabel.IsVisible = false;
+                waterButton.IsVisible = false;
             }
             else if (!waterTappedState)
             {
@@ -39,7 +80,11 @@ namespace vMe.Views
                 batteryLevel.IsVisible = false;
                 waterLevel.WidthRequest = 394;
 
-                waterMenu.IsVisible = true;
+                waterLevel.RaiseChild(waterDropPic);
+                waterLabel.IsVisible = true;
+                waterButton.IsVisible = true;
+
+
 
             }
         }
@@ -57,7 +102,8 @@ namespace vMe.Views
                 runningLevel.IsVisible = true;
                 batteryLevel.IsVisible = true;
 
-                waterMenu.IsVisible = false;
+                runningLevel.LowerChild(waterDropPic);
+                runningLabel.IsVisible = false;
             }
             else if (!runningTappedState)
             {
@@ -69,7 +115,8 @@ namespace vMe.Views
                 batteryLevel.IsVisible = false;
                 runningLevel.WidthRequest = 394;
 
-                waterMenu.IsVisible = true;
+                runningLevel.RaiseChild(waterDropPic);
+                runningLabel.IsVisible = true;
 
             }
         }
@@ -85,7 +132,10 @@ namespace vMe.Views
 
                 waterLevel.IsVisible = true;
                 runningLevel.IsVisible = true;
-                batteryLevel.IsVisible = true;
+
+                batteryLevel.LowerChild(waterDropPic);
+                batteryLabel.IsVisible = false;
+
             }
             else if (!batteryTappedState)
             {
@@ -97,7 +147,13 @@ namespace vMe.Views
                 batteryLevel.IsVisible = true;
                 batteryLevel.WidthRequest = 394;
 
+                batteryLevel.RaiseChild(waterDropPic);
+                batteryLabel.IsVisible = true;
             }
+        }
+
+        void drinkWaterTapped(System.Object sender, System.EventArgs e)
+        {
         }
     }
 }

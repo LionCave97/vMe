@@ -22,18 +22,24 @@
                    <RelativeLayout BackgroundColor="#F2E74B" Grid.Row="0" Grid.Column="0" VerticalOptions="CenterAndExpand"
                                    Margin="10, 20, 0, 0" HeightRequest="180"
                                    x:Name="waterLevel">
-                       <ImageButton Source="waterDrop"
+                       <ImageButton Source="waterDrop" x:Name="waterDropPic"
                               VerticalOptions="CenterAndExpand"
                               HorizontalOptions="EndAndExpand"
                               Margin="12, 40, 0, 20" BackgroundColor="Transparent"
                                    WidthRequest="-1" Clicked="waterTapped">
                               </ImageButton>
-                       <RelativeLayout IsVisible="false" HeightRequest="180"
-                                       BackgroundColor="Green" WidthRequest="60"
+                       <StackLayout HeightRequest="-1"
+                                        WidthRequest="-1"
                                        x:Name="waterMenu" VerticalOptions="End"
-                                       HorizontalOptions="EndAndExpand">
-
-                       </RelativeLayout>
+                                       HorizontalOptions="EndAndExpand" >
+                           <Label IsVisible="false" x:Name="waterLabel"
+                                  Text="You need to drink more water" WidthRequest="200"
+                                  Margin="150, 50, 1, 15"  ></Label>
+                           <Button IsVisible="false" x:Name="waterButton"
+                                   Text="Drink Water" WidthRequest="200"
+                                   Margin="150, 0, 10, 15" 
+                                   Clicked="drinkWaterTapped"></Button>
+                       </StackLayout>
                    </RelativeLayout>
 
                    <RelativeLayout BackgroundColor="#ff220c" Grid.Row="0" Grid.Column="1" VerticalOptions="CenterAndExpand"
@@ -45,6 +51,15 @@
                               Margin="12, 40, 12, 20" BackgroundColor="Transparent"
                                    WidthRequest="-1"  Clicked="runningTapped">
                               </ImageButton>
+                       <StackLayout HeightRequest="-1"
+                                        WidthRequest="-1"
+                                       x:Name="runningMenu" VerticalOptions="End"
+                                       HorizontalOptions="EndAndExpand" >
+                           <Label IsVisible="false" x:Name="runningLabel"
+                                  Text="You need to run more today" WidthRequest="200"
+                                  Margin="150, 50, 1, 15"  ></Label>
+                           
+                       </StackLayout>
                    </RelativeLayout>
 
                    <RelativeLayout BackgroundColor="#f4f1de" Grid.Row="0" Grid.Column="2" VerticalOptions="CenterAndExpand"
@@ -56,6 +71,15 @@
                               Margin="12, 40, 0, 20" BackgroundColor="Transparent"
                                    WidthRequest="-1"  Clicked="batteryTapped">
                               </ImageButton>
+                       <StackLayout HeightRequest="-1"
+                                        WidthRequest="-1"
+                                       x:Name="batteryMenu" VerticalOptions="End"
+                                       HorizontalOptions="EndAndExpand" >
+                           <Label IsVisible="false" x:Name="batteryLabel"
+                                  Text="Battery is running low" WidthRequest="200"
+                                  Margin="150, 50, 1, 15" ></Label>
+                           
+                       </StackLayout>
                    </RelativeLayout>
 
                 </Grid>
