@@ -48,8 +48,8 @@ namespace vMe.Views
 
         public void EnergyFull()
         {
-            batteryLabel.Text = "Battery is full!";            
-            Console.WriteLine("Battery is full!!!")
+            batteryLabel.Text = "Battery is full!";
+            Console.WriteLine("Battery is full!!!");
         }
 
         private void updateTimedData(object sender, ElapsedEventArgs e)
