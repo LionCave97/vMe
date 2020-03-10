@@ -26,6 +26,8 @@ namespace vMe.Views
                 waterLevel.IsVisible = true;
                 runningLevel.IsVisible = true;
                 batteryLevel.IsVisible = true;
+
+                waterMenu.IsVisible = false;
             }
             else if (!waterTappedState)
             {
@@ -36,8 +38,9 @@ namespace vMe.Views
                 runningLevel.IsVisible = false;
                 batteryLevel.IsVisible = false;
                 waterLevel.WidthRequest = 394;
-                
-                
+
+                waterMenu.IsVisible = true;
+
             }
         }
 
@@ -53,6 +56,8 @@ namespace vMe.Views
                 waterLevel.IsVisible = true;
                 runningLevel.IsVisible = true;
                 batteryLevel.IsVisible = true;
+
+                waterMenu.IsVisible = false;
             }
             else if (!runningTappedState)
             {
@@ -63,6 +68,8 @@ namespace vMe.Views
                 runningLevel.IsVisible = true;
                 batteryLevel.IsVisible = false;
                 runningLevel.WidthRequest = 394;
+
+                waterMenu.IsVisible = true;
 
             }
         }

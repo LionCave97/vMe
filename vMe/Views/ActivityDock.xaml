@@ -25,9 +25,15 @@
                        <ImageButton Source="waterDrop"
                               VerticalOptions="CenterAndExpand"
                               HorizontalOptions="EndAndExpand"
-                              Margin="6, 40, 0, 20" BackgroundColor="Transparent"
-                                    Clicked="waterTapped">
+                              Margin="12, 40, 0, 20" BackgroundColor="Transparent"
+                                   WidthRequest="-1" Clicked="waterTapped">
                               </ImageButton>
+                       <RelativeLayout IsVisible="false" HeightRequest="180"
+                                       BackgroundColor="Green" WidthRequest="60"
+                                       x:Name="waterMenu" VerticalOptions="End"
+                                       HorizontalOptions="EndAndExpand">
+
+                       </RelativeLayout>
                    </RelativeLayout>
 
                    <RelativeLayout BackgroundColor="#ff220c" Grid.Row="0" Grid.Column="1" VerticalOptions="CenterAndExpand"
@@ -36,8 +42,8 @@
                        <ImageButton Source="runningMan"
                               VerticalOptions="CenterAndExpand"
                               HorizontalOptions="EndAndExpand"
-                              Margin="3, 40, 3, 20" BackgroundColor="Transparent"
-                                    Clicked="runningTapped">
+                              Margin="12, 40, 12, 20" BackgroundColor="Transparent"
+                                   WidthRequest="-1"  Clicked="runningTapped">
                               </ImageButton>
                    </RelativeLayout>
 
@@ -47,8 +53,8 @@
                        <ImageButton Source="battery"
                               VerticalOptions="CenterAndExpand"
                               HorizontalOptions="EndAndExpand"
-                              Margin="6, 40, 0, 20" BackgroundColor="Transparent"
-                                    Clicked="batteryTapped">
+                              Margin="12, 40, 0, 20" BackgroundColor="Transparent"
+                                   WidthRequest="-1"  Clicked="batteryTapped">
                               </ImageButton>
                    </RelativeLayout>
 
