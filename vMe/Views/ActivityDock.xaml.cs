@@ -48,8 +48,15 @@ namespace vMe.Views
 
         public void EnergyFull()
         {
-            batteryLabel.Text = "Battery is full!";
-            Console.WriteLine("Battery is full!!!");
+            
+            Device.BeginInvokeOnMainThread(async () =>
+            {
+                batteryLabel.Text = "Battery is full! Label";
+                Console.WriteLine(batteryLabel.Text);
+                batteryLabel.FontSize = 50;
+                Console.WriteLine("Battery is full!!! Log");
+            });
+           
         }
 
         private void updateTimedData(object sender, ElapsedEventArgs e)

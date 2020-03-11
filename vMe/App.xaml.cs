@@ -12,7 +12,7 @@ namespace vMe
         
         public Application()
         {           
-            InitializeComponent();
+            
 
             DependencyService.Register<MockDataStore>();
             MainPage = new MainPage();
