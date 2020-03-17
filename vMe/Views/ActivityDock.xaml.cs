@@ -14,60 +14,41 @@ namespace vMe.Views
     [DesignTimeVisible(false)]
     public partial class ActivityDock : ContentView
     {
-        private TimeKeeper timeKeeper = new TimeKeeper();
+        private FluidKeeper fluid = new FluidKeeper();
+        private EnergyKeeper energy = new EnergyKeeper();
+        private StepKeeper steps = new StepKeeper();
 
-        private static Timer timer;
-
+        //Menu config
         bool waterTappedState = false;
         bool runningTappedState = false;
         bool batteryTappedState = false;
+
         public ActivityDock()
-        {
+        {            
             InitializeComponent();
-
-            StartTime();
+            UiUpdate();
         }
 
-        private void StartTime()
+        public void UiUpdate()
         {
-            timer = new Timer();
-
-            timer.Interval = 1000;
-            timer.Enabled = true;
-            timer.Elapsed += updateTimedData;
-            timer.Start();
-
-        }
-
-        private void ResetTimer()
-        {
-            timeKeeper.StartTime = DateTime.Now;
-
-            StartTime();
-        }
-
-        public void EnergyFull()
-        {
-            
             Device.BeginInvokeOnMainThread(async () =>
             {
-                batteryLabel.Text = "Battery is full! Label";
-                Console.WriteLine(batteryLabel.Text);
-                batteryLabel.FontSize = 50;
-                Console.WriteLine("Battery is full!!! Log");
+                Console.WriteLine("UpdateUi");
+                string sBatteryCount = energy.RobotEnergy.ToString();
+                batteryLabel.Text = sBatteryCount;
+
+                string sFluidCount = fluid.FluidCount.ToString();
+                waterLabel.Text = sFluidCount;
             });
-           
-        }
+            
+            
+            
+        }       
 
-        private void updateTimedData(object sender, ElapsedEventArgs e)
-        {
-            TimeSpan timeElapsed = e.SignalTime - timeKeeper.StartTime;
-                        
-        }
-
+               
         void waterTapped(System.Object sender, System.EventArgs e)
         {
-            Console.WriteLine(timeKeeper.GetTimeElapsed());
+            UiUpdate();
             Console.WriteLine("Tapped");
             if (waterTappedState)
             {
@@ -104,6 +85,8 @@ namespace vMe.Views
 
         void runningTapped(System.Object sender, System.EventArgs e)
         {
+            UiUpdate();
+            runningLabel.Text = steps.Steps.ToString();
             Console.WriteLine("Tapped");
             if (runningTappedState)
             {
@@ -136,6 +119,7 @@ namespace vMe.Views
 
         void batteryTapped(System.Object sender, System.EventArgs e)
         {
+            UiUpdate();
             Console.WriteLine("Tapped");
             if (batteryTappedState)
             {
@@ -165,8 +149,15 @@ namespace vMe.Views
             }
         }
 
+        //Action Buttons
+
         void drinkWaterTapped(System.Object sender, System.EventArgs e)
         {
+            Console.WriteLine(fluid.FluidCount);
+            fluid.FluidCount += 10;
+            Console.WriteLine(fluid.FluidCount);
+            UiUpdate();
+            
         }
     }
 }

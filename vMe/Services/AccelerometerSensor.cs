@@ -27,7 +27,6 @@ namespace vMe.Services
 
             public AccelerometerTest()
             {
-                Console.WriteLine("Test Accelerometer");
                 // Register for reading changes, be sure to unsubscribe when finished
                 Accelerometer.ReadingChanged += Accelerometer_ReadingChanged;
             }
@@ -46,16 +45,9 @@ namespace vMe.Services
                 if (y == 2)
                 {
                     int energy = energyLevel.RobotEnergy;
-                    Console.WriteLine(energy);
                     energyLevel.RobotEnergy = energy +1;
-                    energy = energyLevel.RobotEnergy;
-                    Console.WriteLine(energy);
-                    if (energy > 15)
-                    {
-                        Console.WriteLine("Battery Full!");
-                        var Activity = new ActivityDock();
-                        Activity.EnergyFull();
-                    }
+                    energy = energyLevel.RobotEnergy;                  
+                    
                 }
 
 

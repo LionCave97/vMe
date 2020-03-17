@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace vMe.Views
+namespace vMe.Services
 {
     public class TimeKeeper
     {
@@ -11,21 +11,24 @@ namespace vMe.Views
         const string storedTimeKey = "storedTime";
 
         public DateTime StartTime
-        {
+        {         
             get
             {
                 if (Application.Current.Properties.ContainsKey(startTimeKey))
                 {
+                    Console.WriteLine("TimeKeeper get");
                     return new DateTime((long)Application.Current.Properties[startTimeKey]);
                 }
                 else
                 {
+                    Console.WriteLine("TimeKeeper get now");
                     return DateTime.Now;
                 }
             }
 
             set
             {
+                Console.WriteLine("TimeKeeper set");
                 Application.Current.Properties[startTimeKey] = value.Ticks;
             }
         }
