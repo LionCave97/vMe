@@ -44,11 +44,30 @@ namespace vMe.Services
             }
         }
 
+        public void getFluid()
+        {
+            int fluid = FluidCount;
+
+            var today = timeKeeper.getToday();
+            var oldDate = timeKeeper.getOldDateFluid();
+
+            if (today == oldDate)
+            {
+                timeKeeper.FluidDate = today;
+            }
+            else
+            {
+                timeKeeper.FluidDate = today;
+                FluidCount = 0;
+            }
+            StartTime();
+        }
+
         private void StartTime()
         {
             timer = new Timer();
 
-            timer.Interval = 1000;
+            timer.Interval = 60000;
             timer.Enabled = true;
             timer.Elapsed += updateTimedData;
             timer.Start();
@@ -56,7 +75,8 @@ namespace vMe.Services
         }
         private void updateTimedData(object sender, ElapsedEventArgs e)
         {
-            TimeSpan timeElapsed = e.SignalTime - timeKeeper.StartTime;
+            Console.WriteLine("TimeLoop");
+            getFluid();
 
         }
 

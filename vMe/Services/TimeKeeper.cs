@@ -9,6 +9,7 @@ namespace vMe.Services
 
         const string startTimeKey = "startTime";
         const string storedTimeKey = "storedTime";
+        const string FluidDateKey = "fluiddate";
 
         public DateTime StartTime
         {         
@@ -56,6 +57,38 @@ namespace vMe.Services
         public double GetTimeElapsed()
         {
             return (StoredTime - StartTime).TotalSeconds;
+        }
+
+        public String FluidDate
+        {
+            get
+            {
+                if (Application.Current.Properties.ContainsKey(FluidDateKey))
+                {                    
+                    return (string)Application.Current.Properties[FluidDateKey];
+                }
+                else
+                {
+                    var date = DateTime.Today.Date;
+                    return date.ToString("dd-MM-yyyy");
+                }
+            }
+
+            set
+            {
+                Application.Current.Properties[FluidDateKey] = value;
+            }
+        }
+
+        public String getToday()
+        {
+            var date = DateTime.Today.Date;
+            return date.ToString("dd-MM-yyyy");
+        }
+
+        public String getOldDateFluid()
+        {
+            return FluidDate;
         }
 
     }

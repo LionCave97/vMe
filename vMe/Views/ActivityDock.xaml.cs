@@ -26,6 +26,7 @@ namespace vMe.Views
         public ActivityDock()
         {            
             InitializeComponent();
+            fluid.getFluid();
             UiUpdate();
         }
 
@@ -38,7 +39,7 @@ namespace vMe.Views
                 batteryLabel.Text = sBatteryCount;
 
                 string sFluidCount = fluid.FluidCount.ToString();
-                waterLabel.Text = sFluidCount;
+                waterLabel.Text = "You have drank "+sFluidCount+"% of your daily intake";
             });
             
             
