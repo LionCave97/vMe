@@ -27,6 +27,7 @@ namespace vMe.Views
         {            
             InitializeComponent();
             fluid.getFluid();
+            energy.getEnergy();
             UiUpdate();
         }
 
@@ -34,7 +35,6 @@ namespace vMe.Views
         {
             Device.BeginInvokeOnMainThread(async () =>
             {
-                Console.WriteLine("UpdateUi");
                 string sBatteryCount = energy.RobotEnergy.ToString();
                 batteryLabel.Text = sBatteryCount;
 

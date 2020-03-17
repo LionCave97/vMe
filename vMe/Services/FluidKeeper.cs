@@ -25,7 +25,6 @@ namespace vMe.Services
                 
                 if (Application.Current.Properties.ContainsKey(fluidKey))
                 {
-                    Console.WriteLine("Reading Fluid  " + (int)Application.Current.Properties[fluidKey]);
                     return (int)Application.Current.Properties[fluidKey];
 
 
@@ -39,8 +38,15 @@ namespace vMe.Services
             }
             set
             {
-                Console.WriteLine("Writing Fluid!!" + value);
-                Application.Current.Properties[fluidKey] = value;
+
+                if (value > 120)
+                {
+                    Application.Current.Properties[fluidKey] = 120;
+                }
+                else
+                {
+                    Application.Current.Properties[fluidKey] = value;
+                }
             }
         }
 
@@ -79,14 +85,6 @@ namespace vMe.Services
             getFluid();
 
         }
-
-        private void ResetTimer()
-        {
-            timeKeeper.StartTime = DateTime.Now;
-
-            StartTime();
-        }
-
     }
 }
 

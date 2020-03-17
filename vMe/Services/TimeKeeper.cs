@@ -17,19 +17,19 @@ namespace vMe.Services
             {
                 if (Application.Current.Properties.ContainsKey(startTimeKey))
                 {
-                    Console.WriteLine("TimeKeeper get");
+                    
                     return new DateTime((long)Application.Current.Properties[startTimeKey]);
                 }
                 else
                 {
-                    Console.WriteLine("TimeKeeper get now");
+                    
                     return DateTime.Now;
                 }
             }
 
             set
             {
-                Console.WriteLine("TimeKeeper set");
+               
                 Application.Current.Properties[startTimeKey] = value.Ticks;
             }
         }

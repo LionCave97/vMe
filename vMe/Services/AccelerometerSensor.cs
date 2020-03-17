@@ -1,10 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Xamarin.Forms;
 using Xamarin.Essentials;
-using vMe.Views;
-using vMe.Services;
 
 
 namespace vMe.Services
@@ -44,9 +39,7 @@ namespace vMe.Services
 
                 if (y == 2)
                 {
-                    int energy = energyLevel.RobotEnergy;
-                    energyLevel.RobotEnergy = energy +1;
-                    energy = energyLevel.RobotEnergy;                  
+                    energyLevel.increaseEnergy();                 
                     
                 }
 
