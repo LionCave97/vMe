@@ -16,7 +16,6 @@ namespace vMe.Views
     {
         private FluidKeeper fluid = new FluidKeeper();
         private EnergyKeeper energy = new EnergyKeeper();
-        private StepKeeper steps = new StepKeeper();
 
         //Menu config
         bool waterTappedState = false;
@@ -35,6 +34,7 @@ namespace vMe.Views
         {
             Device.BeginInvokeOnMainThread(async () =>
             {
+                Console.WriteLine("UpdateUi");
                 //Battery/Energy Ui Update
                 int battery = energy.RobotEnergy;
                 string sBatteryCount = battery.ToString();
@@ -69,7 +69,6 @@ namespace vMe.Views
 
                 //Steps Ui Update
 
-                runningLabel.Text = steps.Steps.ToString();
 
                 //Fluid Ui Update
                 int fluidCount = fluid.FluidCount;
@@ -106,6 +105,8 @@ namespace vMe.Views
                 }
                 waterDropPic.Margin = new Thickness(12, 40, 0, 20);
                 waterDropPic.WidthRequest = -1;
+
+                Console.WriteLine(DependencyService.Get<PedometerSensor>().GetPedometer().ToString());
 
 
 

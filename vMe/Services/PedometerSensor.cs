@@ -1,7 +1,8 @@
 ﻿using System;
 namespace vMe.Services
 {
-    public interface PedometerSensor
+    public partial interface PedometerSensor
     {
+       DeviceSteps GetPedometer();
     }
 }

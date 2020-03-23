@@ -4,13 +4,14 @@ using Xamarin.Forms;
 using vMe.Views;
 using vMe.Services;
 
+[assembly: ExportRenderer(typeof(iOSStep), typeof(StepManageriOS))]
 namespace vMe.Services
 {
-    public class StepManager : ContentPage
+    public class StepManageriOS : ContentPage
     {
     private StepKeeper steps = new StepKeeper();
 
-        public StepManager()
+        public StepManageriOS()
         {
         Console.WriteLine("Test");
         steps.Steps = 10;

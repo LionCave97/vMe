@@ -9,7 +9,6 @@ namespace vMe.iOS
 {
     public class Application
     {
-        public StepManager steps = new StepManager();
 
         // This is the main entry point of the application.
         static void Main(string[] args)

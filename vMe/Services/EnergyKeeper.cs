@@ -68,9 +68,9 @@ namespace vMe.Services
         {
             ResetTimer();
             RobotEnergy += 5;
-            var duration = TimeSpan.FromSeconds(1);
             var Activity = new ActivityDock();
             Activity.UiUpdate();
+            var duration = TimeSpan.FromSeconds(1);
             //Vibration.Vibrate(duration);
         }
 

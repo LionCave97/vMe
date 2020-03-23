@@ -41,8 +41,10 @@ namespace vMe.Services
                 if (y == 2)
                 {
                     energyLevel.increaseEnergy();
-                    
-                    
+                    var Activity = new ActivityDock();
+                    Activity.UiUpdate();
+
+
                 }
 
 

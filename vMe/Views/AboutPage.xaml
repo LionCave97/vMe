@@ -35,7 +35,9 @@
                             </FormattedString.Spans>
                         </FormattedString>
                     </Label.FormattedText>
-                </Label>                           
+                </Label>
+
+                <Button Text="Dev Reset" Clicked="Button_Clicked"></Button>
             </StackLayout>
         </ScrollView>
     </Grid>

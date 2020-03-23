@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentView xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="vMe.Views.ActivityDock">
-    <ContentView.Content>
+    <ContentView.Content>        
         <StackLayout 
                      HeightRequest="200" Padding="0" 
                      BackgroundColor="#2d3047" HorizontalOptions="End" x:Name="dockContainer">
@@ -40,8 +40,7 @@
                                    Margin="150, 0, 10, 15" 
                                    Clicked="drinkWaterTapped"></Button>
                        </StackLayout>
-                   </RelativeLayout>
-
+                   </RelativeLayout>                   
                    <RelativeLayout BackgroundColor="#ff220c" Grid.Row="0" Grid.Column="1" VerticalOptions="CenterAndExpand"
                                    Margin=" 5, 20, 5, 0" HeightRequest="180"
                                    x:Name="runningLevel">
