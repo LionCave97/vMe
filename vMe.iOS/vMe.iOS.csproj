@@ -197,6 +197,38 @@
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\1024pt.png">
       <Visible>false</Visible>
     </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\water10.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\water10.imageset\water10.png" />
+    <ImageAsset Include="Assets.xcassets\water10.imageset\water10-1.png" />
+    <ImageAsset Include="Assets.xcassets\water10.imageset\water10-2.png" />
+    <ImageAsset Include="Assets.xcassets\water50.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\water50.imageset\water50.png" />
+    <ImageAsset Include="Assets.xcassets\water50.imageset\water50-1.png" />
+    <ImageAsset Include="Assets.xcassets\water50.imageset\water50-2.png" />
+    <ImageAsset Include="Assets.xcassets\water80.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\water80.imageset\water80.png" />
+    <ImageAsset Include="Assets.xcassets\water80.imageset\water80-1.png" />
+    <ImageAsset Include="Assets.xcassets\water80.imageset\water80-2.png" />
+    <ImageAsset Include="Assets.xcassets\water100.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\water100.imageset\water100.png" />
+    <ImageAsset Include="Assets.xcassets\water100.imageset\water100-1.png" />
+    <ImageAsset Include="Assets.xcassets\water100.imageset\water100-2.png" />
+    <ImageAsset Include="Assets.xcassets\battery10.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\battery10.imageset\battery10.png" />
+    <ImageAsset Include="Assets.xcassets\battery10.imageset\battery10-1.png" />
+    <ImageAsset Include="Assets.xcassets\battery10.imageset\battery10-2.png" />
+    <ImageAsset Include="Assets.xcassets\battery50.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\battery50.imageset\battery50.png" />
+    <ImageAsset Include="Assets.xcassets\battery50.imageset\battery50-1.png" />
+    <ImageAsset Include="Assets.xcassets\battery50.imageset\battery50-2.png" />
+    <ImageAsset Include="Assets.xcassets\battery80.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\battery80.imageset\battery80.png" />
+    <ImageAsset Include="Assets.xcassets\battery80.imageset\battery80-1.png" />
+    <ImageAsset Include="Assets.xcassets\battery80.imageset\battery80-2.png" />
+    <ImageAsset Include="Assets.xcassets\battery100.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\battery100.imageset\battery100.png" />
+    <ImageAsset Include="Assets.xcassets\battery100.imageset\battery100-1.png" />
+    <ImageAsset Include="Assets.xcassets\battery100.imageset\battery100-2.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -223,5 +255,13 @@
     <Folder Include="Assets.xcassets\waterDrop.imageset\" />
     <Folder Include="Assets.xcassets\runningMan.imageset\" />
     <Folder Include="Assets.xcassets\battery.imageset\" />
+    <Folder Include="Assets.xcassets\water10.imageset\" />
+    <Folder Include="Assets.xcassets\water50.imageset\" />
+    <Folder Include="Assets.xcassets\water80.imageset\" />
+    <Folder Include="Assets.xcassets\water100.imageset\" />
+    <Folder Include="Assets.xcassets\battery10.imageset\" />
+    <Folder Include="Assets.xcassets\battery50.imageset\" />
+    <Folder Include="Assets.xcassets\battery80.imageset\" />
+    <Folder Include="Assets.xcassets\battery100.imageset\" />
   </ItemGroup>
 </Project>

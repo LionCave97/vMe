@@ -1,5 +1,6 @@
 ﻿using System;
 using Xamarin.Essentials;
+using vMe.Views;
 
 
 namespace vMe.Services
@@ -39,7 +40,8 @@ namespace vMe.Services
 
                 if (y == 2)
                 {
-                    energyLevel.increaseEnergy();                 
+                    energyLevel.increaseEnergy();
+                    
                     
                 }
 

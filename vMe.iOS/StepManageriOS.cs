@@ -1,5 +1,5 @@
 ﻿using System;
-
+using CoreMotion;
 using Xamarin.Forms;
 using vMe.Views;
 using vMe.Services;
@@ -14,6 +14,11 @@ namespace vMe.Services
         {
         Console.WriteLine("Test");
         steps.Steps = 10;
+
+        }
+
+        public void StartUp()
+        {
 
         }
     }

@@ -69,7 +69,9 @@ namespace vMe.Services
             ResetTimer();
             RobotEnergy += 5;
             var duration = TimeSpan.FromSeconds(1);
-            Vibration.Vibrate(duration);
+            var Activity = new ActivityDock();
+            Activity.UiUpdate();
+            //Vibration.Vibrate(duration);
         }
 
         public void getEnergy()
@@ -101,9 +103,8 @@ namespace vMe.Services
         {
             TimeSpan timeElapsed = e.SignalTime - timeKeeper.StartTime;
             double sec = timeElapsed.TotalSeconds;
-            Console.WriteLine(sec);
 
-            if (sec > 10)
+            if (sec > 60)
             {
                 Console.WriteLine("Fired");
                 decreaseEnergy();

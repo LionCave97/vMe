@@ -36,7 +36,7 @@
                                   Text="You need to drink more water" WidthRequest="200"
                                   Margin="150, 50, 1, 15"  ></Label>
                            <Button IsVisible="false" x:Name="waterButton"
-                                   Text="Drink Water" WidthRequest="200"
+                                   Text="Drank a glass Water" WidthRequest="200"
                                    Margin="150, 0, 10, 15" 
                                    Clicked="drinkWaterTapped"></Button>
                        </StackLayout>
@@ -46,7 +46,7 @@
                                    Margin=" 5, 20, 5, 0" HeightRequest="180"
                                    x:Name="runningLevel">
                        <ImageButton Source="runningMan"
-                              VerticalOptions="CenterAndExpand"
+                              VerticalOptions="CenterAndExpand" x:Name="runningManPic"
                               HorizontalOptions="EndAndExpand"
                               Margin="12, 40, 12, 20" BackgroundColor="Transparent"
                                    WidthRequest="-1"  Clicked="runningTapped">
@@ -66,7 +66,7 @@
                                    Margin="0, 20, 10, 0" HeightRequest="180"
                                    x:Name="batteryLevel">
                        <ImageButton Source="battery"
-                              VerticalOptions="CenterAndExpand"
+                              VerticalOptions="CenterAndExpand" x:Name="batteryPic"
                               HorizontalOptions="EndAndExpand"
                               Margin="12, 40, 0, 20" BackgroundColor="Transparent"
                                    WidthRequest="-1"  Clicked="batteryTapped">
