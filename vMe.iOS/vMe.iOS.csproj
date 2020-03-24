@@ -110,13 +110,7 @@
     <ImageAsset Include="Assets.xcassets\waterDrop.imageset\Contents.json">
       <Visible>false</Visible>
     </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\waterDrop.imageset\waterDrop.png">
-      <Visible>false</Visible>
-    </ImageAsset>
     <ImageAsset Include="Assets.xcassets\waterDrop.imageset\waterDrop-1.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\waterDrop.imageset\waterDrop-2.png">
       <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\runningMan.imageset\Contents.json">
@@ -132,15 +126,6 @@
       <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\battery.imageset\Contents.json">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\battery.imageset\battery.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\battery.imageset\battery-1.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\battery.imageset\battery-2.png">
       <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Notification.png">
@@ -245,6 +230,11 @@
     <ImageAsset Include="Assets.xcassets\lowWater_robot.imageset\lowWater_robot.png" />
     <ImageAsset Include="Assets.xcassets\lowWater_robot.imageset\lowWater_robot-1.png" />
     <ImageAsset Include="Assets.xcassets\lowWater_robot.imageset\lowWater_robot-2.png" />
+    <ImageAsset Include="Assets.xcassets\battery.imageset\battery-3.png" />
+    <ImageAsset Include="Assets.xcassets\battery.imageset\battery.png" />
+    <ImageAsset Include="Assets.xcassets\battery.imageset\battery-1.png" />
+    <ImageAsset Include="Assets.xcassets\waterDrop.imageset\waterDrop-3.png" />
+    <ImageAsset Include="Assets.xcassets\waterDrop.imageset\waterDrop-2.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />

@@ -8,6 +8,7 @@ using vMe.Services;
 using System.Timers;
 
 using Xamarin.Forms;
+using Xamarin.Essentials;
 
 namespace vMe.Views
 {
@@ -21,12 +22,47 @@ namespace vMe.Views
         public RobotPage()
         {
             InitializeComponent();
+            Update();
             Startup();
             Console.WriteLine("RobotState Start");
         }
 
         public void Update()
         {
+            MainThread.BeginInvokeOnMainThread(() =>
+            {
+                int battery = energy.RobotEnergy;
+                int fluidCount = fluid.FluidCount;
+                bool lowPower = false;
+                bool lowFluid = false;
+
+
+                if (battery <= 50)
+                {
+                    lowPower = true;
+                    robotSprite.Source = "lowPower_robot";
+
+                }
+
+
+                if (fluidCount <= 50)
+                {
+                    lowFluid = true;
+                    robotSprite.Source = "lowWater_robot";
+                }
+
+
+
+                if (lowFluid && lowPower)
+                {
+                    robotSprite.Source = "sad_robot";
+                }else if (!lowFluid && !lowPower)
+                {
+                    robotSprite.Source = "happy_robot";
+                }
+
+            });
+
             
         }
 
@@ -34,6 +70,7 @@ namespace vMe.Views
         {
             HoverRobot();
             StartTime();
+            FastStartTime();
         }        
 
         public async void HoverRobot()
@@ -43,13 +80,27 @@ namespace vMe.Views
             await robotSprite.TranslateTo(0, -10, 500);
             await robotSprite.TranslateTo(0, 0, 1000);
         }
+        private void FastStartTime()
+        {
+            timer = new Timer();
+
+            timer.Interval = 1000;
+            timer.Enabled = true;
+            timer.Elapsed += updateFast;
+            timer.Start();
+
+        }
+        private void updateFast(object sender, ElapsedEventArgs e)
+        {
+            Update();
+        }
 
 
         private void StartTime()
         {
             timer = new Timer();
 
-            timer.Interval = 20000;
+            timer.Interval = 15000;
             timer.Enabled = true;
             timer.Elapsed += updateTimedData;
             timer.Start();
@@ -57,8 +108,6 @@ namespace vMe.Views
         }
         private void updateTimedData(object sender, ElapsedEventArgs e)
         {
-            Console.WriteLine("RobotAnimate");
-
             HoverRobot();
         }
 

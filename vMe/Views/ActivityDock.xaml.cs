@@ -8,6 +8,7 @@ using Xamarin.Forms;
 using vMe.Views;
 using vMe.Services;
 using System.Timers;
+using Xamarin.Essentials;
 
 namespace vMe.Views
 {
@@ -16,6 +17,8 @@ namespace vMe.Views
     {
         private FluidKeeper fluid = new FluidKeeper();
         private EnergyKeeper energy = new EnergyKeeper();
+        double widthActive = 0;
+        
 
         //Menu config
         bool waterTappedState = false;
@@ -25,15 +28,34 @@ namespace vMe.Views
         public ActivityDock()
         {            
             InitializeComponent();
+
+            Setup();
             fluid.getFluid();
             energy.getEnergy();
             UiUpdate();
         }
 
+        public void Setup()
+        {
+            var mainDisplayInfo = DeviceDisplay.MainDisplayInfo;
+            var width = mainDisplayInfo.Width / mainDisplayInfo.Density;
+
+            dockContainer.WidthRequest = width;
+            widthActive = (int)Math.Round(width);
+            var v = width / 3;
+            v -= 15;
+            widthActive = v;
+            waterLevel.WidthRequest = widthActive;
+            runningLevel.WidthRequest = widthActive;
+            batteryLevel.WidthRequest = widthActive;
+            runningLabel.Text = v.ToString();
+        }
+
         public void UiUpdate()
         {
-            
                 Console.WriteLine("UpdateUi");
+                //var robotPage = new RobotPage();
+                //robotPage.Update();
                 //Battery/Energy Ui Update
                 int battery = energy.RobotEnergy;
                 string sBatteryCount = battery.ToString();
@@ -119,7 +141,7 @@ namespace vMe.Views
             if (waterTappedState)
             {
                 Console.WriteLine("true");
-                waterLevel.WidthRequest = -1;
+                waterLevel.WidthRequest = widthActive;
                 waterTappedState = false;
 
                 waterLevel.IsVisible = true;
@@ -156,7 +178,7 @@ namespace vMe.Views
             if (runningTappedState)
             {
                 Console.WriteLine("true");
-                runningLevel.WidthRequest = -1;
+                runningLevel.WidthRequest = widthActive;
                 runningTappedState = false;
 
                 waterLevel.IsVisible = true;
@@ -189,7 +211,7 @@ namespace vMe.Views
             if (batteryTappedState)
             {
                 Console.WriteLine("true");
-                batteryLevel.WidthRequest = -1;
+                batteryLevel.WidthRequest = widthActive;
                 batteryTappedState = false;
 
                 waterLevel.IsVisible = true;

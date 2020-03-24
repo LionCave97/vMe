@@ -3,16 +3,16 @@
     <ContentView.Content>        
         <StackLayout 
                      HeightRequest="200" Padding="0" 
-                     BackgroundColor="#2d3047" HorizontalOptions="End" x:Name="dockContainer">
+                     BackgroundColor="#2d3047" HorizontalOptions="End"  x:Name="dockContainer">
                
                <Grid>
                   <Grid.RowDefinitions>
                     <RowDefinition Height="*" />
                   </Grid.RowDefinitions>
                   <Grid.ColumnDefinitions>
-                      <ColumnDefinition Width="Auto" />
-                      <ColumnDefinition Width="Auto" />
-                      <ColumnDefinition Width="Auto" />
+                      <ColumnDefinition Width="auto" />
+                      <ColumnDefinition Width="auto" />
+                      <ColumnDefinition Width="auto" />
                   </Grid.ColumnDefinitions>
                    <StackLayout VerticalOptions="CenterAndExpand"
                      HeightRequest="200" Padding="0" >
@@ -25,15 +25,12 @@
                        <ImageButton Source="waterDrop" x:Name="waterDropPic"
                               VerticalOptions="CenterAndExpand"
                               HorizontalOptions="EndAndExpand"
-                              Margin="12, 40, 0, 20" BackgroundColor="Transparent"
-                                   WidthRequest="-1" Clicked="waterTapped">
+                              Margin="5, 25, 5, 25" BackgroundColor="Transparent" Clicked="waterTapped" >
                               </ImageButton>
-                       <StackLayout HeightRequest="-1"
-                                        WidthRequest="-1"
-                                       x:Name="waterMenu" VerticalOptions="End"
+                       <StackLayout x:Name="waterMenu" VerticalOptions="End"
                                        HorizontalOptions="EndAndExpand" >
                            <Label IsVisible="false" x:Name="waterLabel"
-                                  Text="You need to drink more water" WidthRequest="200"
+                                  Text="You need to drink more water" WidthRequest="180"
                                   Margin="150, 50, 1, 15"  ></Label>
                            <Button IsVisible="false" x:Name="waterButton"
                                    Text="Drank a glass Water" WidthRequest="200"
@@ -47,12 +44,9 @@
                        <ImageButton Source="runningMan"
                               VerticalOptions="CenterAndExpand" x:Name="runningManPic"
                               HorizontalOptions="EndAndExpand"
-                              Margin="12, 40, 12, 20" BackgroundColor="Transparent"
-                                   WidthRequest="-1"  Clicked="runningTapped">
+                              Margin="5, 30, 5, 20" BackgroundColor="Transparent"  Clicked="runningTapped">
                               </ImageButton>
-                       <StackLayout HeightRequest="-1"
-                                        WidthRequest="-1"
-                                       x:Name="runningMenu" VerticalOptions="End"
+                       <StackLayout x:Name="runningMenu" VerticalOptions="End"
                                        HorizontalOptions="EndAndExpand" >
                            <Label IsVisible="false" x:Name="runningLabel"
                                   Text="You need to run more today" WidthRequest="200"
@@ -62,17 +56,14 @@
                    </RelativeLayout>
 
                    <RelativeLayout BackgroundColor="#f4f1de" Grid.Row="0" Grid.Column="2" VerticalOptions="CenterAndExpand"
-                                   Margin="0, 20, 10, 0" HeightRequest="180"
+                                   Margin="3, 20, 10, 3" HeightRequest="180"
                                    x:Name="batteryLevel">
                        <ImageButton Source="battery"
                               VerticalOptions="CenterAndExpand" x:Name="batteryPic"
                               HorizontalOptions="EndAndExpand"
-                              Margin="12, 40, 0, 20" BackgroundColor="Transparent"
-                                   WidthRequest="-1"  Clicked="batteryTapped">
+                              Margin="10, 10, 5, 0" BackgroundColor="Transparent" Clicked="batteryTapped">
                               </ImageButton>
-                       <StackLayout HeightRequest="-1"
-                                        WidthRequest="-1"
-                                       x:Name="batteryMenu" VerticalOptions="End"
+                       <StackLayout x:Name="batteryMenu" VerticalOptions="End"
                                        HorizontalOptions="EndAndExpand" >
                            <Label IsVisible="false" x:Name="batteryLabel"
                                   Text="Battery is running low" WidthRequest="200"
