@@ -11,7 +11,15 @@
             <StackLayout 
                      HeightRequest="200" Padding="0" WidthRequest="600" 
                      BackgroundColor="#2d3047" HorizontalOptions="End">
-                <Label Text="I am feeling good!" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" TextColor="White" FontAttributes="Bold"></Label>
+
+                <Label Text="I am feeling good!" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" TextColor="White" FontSize="Large" FontAttributes="Bold" x:Name="state"></Label>
+
+                <Label Text="Fluid: 100%" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" TextColor="White" x:Name="fluid"></Label>
+
+                <Label Text="Steps: 1000" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" TextColor="White" x:Name="step"></Label>
+
+                <Label Text="Energy: 100%" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" TextColor="White" x:Name="energy"></Label>
+
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>
