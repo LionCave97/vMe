@@ -32,8 +32,7 @@ namespace vMe.Views
 
         public void UiUpdate()
         {
-            Device.BeginInvokeOnMainThread(async () =>
-            {
+            
                 Console.WriteLine("UpdateUi");
                 //Battery/Energy Ui Update
                 int battery = energy.RobotEnergy;
@@ -106,12 +105,8 @@ namespace vMe.Views
                 waterDropPic.Margin = new Thickness(12, 40, 0, 20);
                 waterDropPic.WidthRequest = -1;
 
-                Console.WriteLine(DependencyService.Get<PedometerSensor>().GetPedometer().ToString());
-
-
-
-            });
-            
+                //Console.WriteLine(DependencyService.Get<PedometerSensor>().GetPedometer().ToString());
+                      
             
             
         }       

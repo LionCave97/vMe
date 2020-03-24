@@ -10,9 +10,6 @@ namespace vMe.Views
     {
         public ProfilePage()
         {
-            var Accelerometer = new Services.AccelerometerSensor.AccelerometerTest();
-            Accelerometer.ToggleAccelerometer();
-            SensorSpeed speed = SensorSpeed.UI;
             InitializeComponent();
         }      
 

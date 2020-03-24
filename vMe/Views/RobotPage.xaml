@@ -6,7 +6,7 @@
         <StackLayout BackgroundColor="#2e86ab">
         <StackLayout VerticalOptions="EndAndExpand" HorizontalOptions="FillAndExpand" Padding="0" Margin="0, 0, 0, 40">
             <Image Source="idle_robot" VerticalOptions="CenterAndExpand"
-                   HeightRequest="440"></Image>
+                   HeightRequest="440" x:Name="robotSprite" ></Image>
 
         </StackLayout>
             <local:ActivityDock></local:ActivityDock>

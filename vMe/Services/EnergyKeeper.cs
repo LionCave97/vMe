@@ -71,7 +71,7 @@ namespace vMe.Services
             var Activity = new ActivityDock();
             Activity.UiUpdate();
             var duration = TimeSpan.FromSeconds(1);
-            //Vibration.Vibrate(duration);
+            Vibration.Vibrate(duration);
         }
 
         public void getEnergy()

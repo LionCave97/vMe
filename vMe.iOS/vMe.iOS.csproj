@@ -229,6 +229,22 @@
     <ImageAsset Include="Assets.xcassets\battery100.imageset\battery100.png" />
     <ImageAsset Include="Assets.xcassets\battery100.imageset\battery100-1.png" />
     <ImageAsset Include="Assets.xcassets\battery100.imageset\battery100-2.png" />
+    <ImageAsset Include="Assets.xcassets\happy_robot.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\happy_robot.imageset\happy_robot.png" />
+    <ImageAsset Include="Assets.xcassets\happy_robot.imageset\happy_robot-1.png" />
+    <ImageAsset Include="Assets.xcassets\happy_robot.imageset\happy_robot-2.png" />
+    <ImageAsset Include="Assets.xcassets\sad_robot.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\sad_robot.imageset\sad_robot.png" />
+    <ImageAsset Include="Assets.xcassets\sad_robot.imageset\sad_robot-1.png" />
+    <ImageAsset Include="Assets.xcassets\sad_robot.imageset\sad_robot-2.png" />
+    <ImageAsset Include="Assets.xcassets\lowPower_robot.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\lowPower_robot.imageset\lowPower_robot.png" />
+    <ImageAsset Include="Assets.xcassets\lowPower_robot.imageset\lowPower_robot-1.png" />
+    <ImageAsset Include="Assets.xcassets\lowPower_robot.imageset\lowPower_robot-2.png" />
+    <ImageAsset Include="Assets.xcassets\lowWater_robot.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\lowWater_robot.imageset\lowWater_robot.png" />
+    <ImageAsset Include="Assets.xcassets\lowWater_robot.imageset\lowWater_robot-1.png" />
+    <ImageAsset Include="Assets.xcassets\lowWater_robot.imageset\lowWater_robot-2.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -264,5 +280,9 @@
     <Folder Include="Assets.xcassets\battery80.imageset\" />
     <Folder Include="Assets.xcassets\battery100.imageset\" />
     <Folder Include="Implementations\" />
+    <Folder Include="Assets.xcassets\happy_robot.imageset\" />
+    <Folder Include="Assets.xcassets\sad_robot.imageset\" />
+    <Folder Include="Assets.xcassets\lowPower_robot.imageset\" />
+    <Folder Include="Assets.xcassets\lowWater_robot.imageset\" />
   </ItemGroup>
 </Project>
