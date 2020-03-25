@@ -11,9 +11,6 @@ namespace vMe.Views
         public ProfilePage()
         {
             InitializeComponent();
-        }      
-
-        
-
+        }   
     }
 }

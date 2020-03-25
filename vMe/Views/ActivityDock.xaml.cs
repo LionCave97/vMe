@@ -15,8 +15,13 @@ namespace vMe.Views
     [DesignTimeVisible(false)]
     public partial class ActivityDock : ContentView
     {
+        //Update
         private FluidKeeper fluid = new FluidKeeper();
-        private EnergyKeeper energy = new EnergyKeeper();
+        private StepKeeper step = new StepKeeper();
+        private EnergyKeeper energy = new EnergyKeeper();        
+
+
+        //Setup variable
         double widthActive = 0;
         
 
@@ -52,9 +57,11 @@ namespace vMe.Views
 
         public void UiUpdate()
         {
-                Console.WriteLine("UpdateUi");
-                //var robotPage = new RobotPage();
-                //robotPage.Update();
+            MainThread.BeginInvokeOnMainThread(() =>
+            {
+                Console.WriteLine(DependencyService.Get<PedometerSensor>().GetPedometer().ToString());
+            Console.WriteLine("UpdateUi");
+
                 //Battery/Energy Ui Update
                 int battery = energy.RobotEnergy;
                 string sBatteryCount = battery.ToString();
@@ -88,12 +95,15 @@ namespace vMe.Views
                 batteryPic.WidthRequest = -1;
 
                 //Steps Ui Update
-
+                int stepCount = step.RobotCounts;
+                string stepCounts = stepCount.ToString();
+                Console.WriteLine("Steps taken " + stepCounts);
+                runningLabel.Text = "You have taken " + stepCounts + " steps today";
 
                 //Fluid Ui Update
                 int fluidCount = fluid.FluidCount;
                 string sFluidCount = fluidCount.ToString();
-                waterLabel.Text = "You have drank " + sFluidCount + "% of your daily intake";
+                waterLabel.Text = "You have drink " + sFluidCount + "% of your daily intake";
                 if (fluidCount >= 5)
                 {
                     waterDropPic.Source = "waterDrop";
@@ -101,34 +111,34 @@ namespace vMe.Views
                 if (fluidCount >= 10)
                 {
                     waterDropPic.Source = "water10";
-                    waterLabel.Text = "You have drank " + sFluidCount + "% of your daily intake. I feel a bit thirsty at this stage.";
+                    waterLabel.Text = "You have drink " + sFluidCount + "% of your daily intake. I feel a bit thirsty at this stage.";
                 }
                 if (fluidCount >= 50)
                 {
                     waterDropPic.Source = "water50";
-                    waterLabel.Text = "You have drank " + sFluidCount + "% of your daily intake";
+                    waterLabel.Text = "You have drink " + sFluidCount + "% of your daily intake";
                 }
                 if (fluidCount >= 80)
                 {
                     waterDropPic.Source = "water80";
-                    waterLabel.Text = "You have drank " + sFluidCount + "% of your daily intake. Almost there!";
+                    waterLabel.Text = "You have drink " + sFluidCount + "% of your daily intake. Almost there!";
                 }
                 if (fluidCount >= 100)
                 {
                     waterDropPic.Source = "water100";
-                    waterLabel.Text = "You have drank " + sFluidCount + "% of your daily intake. You have reached your goal!";
+                    waterLabel.Text = "You have drink " + sFluidCount + "% of your daily intake. You have reached your goal!";
                 }
                 if (fluidCount >= 110)
                 {
                     waterDropPic.Source = "water100";
-                    waterLabel.Text = "You have drank " + sFluidCount + "% of your daily intake. I think that may be enough for now.";
+                    waterLabel.Text = "You have drink " + sFluidCount + "% of your daily intake. I think that may be enough for now.";
                 }
                 waterDropPic.Margin = new Thickness(12, 40, 0, 20);
                 waterDropPic.WidthRequest = -1;
 
-                    Console.WriteLine(DependencyService.Get<PedometerSensor>().GetPedometer().ToString());                    
-            
-            
+
+
+            });
         }       
 
                

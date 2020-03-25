@@ -3,13 +3,13 @@ using vMe.Services;
 using CoreMotion;
 using Foundation;
 using vMe.iOS.Implementations;
+using vMe.Views;
 
 [assembly: Xamarin.Forms.Dependency(typeof(PedometerSensorImplementations))]
 namespace vMe.iOS.Implementations
 {
     public class PedometerSensorImplementations : PedometerSensor
     {
-        public delegate void DailyStepCountChangedEventHandler(nint stepCount);
 
         private StepKeeper steps = new StepKeeper();
 
@@ -42,34 +42,25 @@ namespace vMe.iOS.Implementations
             if (stepCounter == null)
                 stepCounter = new CMStepCounter();
 
-            Console.WriteLine("Can Count steps " + CMStepCounter.IsStepCountingAvailable);
+            //Console.WriteLine("Can Count steps " + CMStepCounter.IsStepCountingAvailable);
 
             stepCounter.QueryStepCount(sMidnight, NSDate.Now, _queue, DailyStepQueryHandler);
-
-            Console.WriteLine("The steps " + DailyStepCountChanged);
         }
 
         private void DailyStepQueryHandler(nint stepCount, NSError error)
-        {
-            Console.WriteLine("Step count " + stepCount);
-            Console.WriteLine("Daily" + DailyStepCountChanged);
+        {            
+            
+            
 
-            if (DailyStepCountChanged == null)
-                Console.WriteLine("Null");
-                return;
+            if (steps.RobotCounts != (Int32)stepCount)
+            {
+                steps.RobotCounts = (Int32)stepCount;
+                Console.WriteLine("Step count " + (Int32)stepCount);
 
-            #if DEBUG
-                        stepCount = 1245;
+                var Activity = new ActivityDock();
+                Activity.UiUpdate();
+            }
 
-                        //stepCount = 6481;
-
-                        //stepCount = 9328;
-            #endif
-
-
-            DailyStepCountChanged(stepCount);
-
-            Console.WriteLine("Step count " + stepCount);
         }
 
         private void Updater(nint stepCount, NSDate date, NSError error)
@@ -78,8 +69,6 @@ namespace vMe.iOS.Implementations
             stepCounter.QueryStepCount(sMidnight, NSDate.Now, _queue, DailyStepQueryHandler);
         }
 
-
-        public event DailyStepCountChangedEventHandler DailyStepCountChanged;
 
 
     }
