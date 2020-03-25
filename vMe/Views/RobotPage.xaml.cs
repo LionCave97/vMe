@@ -100,7 +100,7 @@ namespace vMe.Views
         {
             timer = new Timer();
 
-            timer.Interval = 15000;
+            timer.Interval = 10000;
             timer.Enabled = true;
             timer.Elapsed += updateTimedData;
             timer.Start();

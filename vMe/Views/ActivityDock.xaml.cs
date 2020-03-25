@@ -48,7 +48,6 @@ namespace vMe.Views
             waterLevel.WidthRequest = widthActive;
             runningLevel.WidthRequest = widthActive;
             batteryLevel.WidthRequest = widthActive;
-            runningLabel.Text = v.ToString();
         }
 
         public void UiUpdate()
@@ -127,8 +126,7 @@ namespace vMe.Views
                 waterDropPic.Margin = new Thickness(12, 40, 0, 20);
                 waterDropPic.WidthRequest = -1;
 
-                //Console.WriteLine(DependencyService.Get<PedometerSensor>().GetPedometer().ToString());
-                      
+                    Console.WriteLine(DependencyService.Get<PedometerSensor>().GetPedometer().ToString());                    
             
             
         }       
