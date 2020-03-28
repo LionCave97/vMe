@@ -23,7 +23,8 @@ namespace vMe.Views
 
         //Setup variable
         double widthActive = 0;
-        
+        double heightActive = 0;
+
 
         //Menu config
         bool waterTappedState = false;
@@ -44,6 +45,7 @@ namespace vMe.Views
         {
             var mainDisplayInfo = DeviceDisplay.MainDisplayInfo;
             var width = mainDisplayInfo.Width / mainDisplayInfo.Density;
+            var height = mainDisplayInfo.Height / mainDisplayInfo.Density;
 
             dockContainer.WidthRequest = width;
             widthActive = (int)Math.Round(width);
@@ -53,6 +55,14 @@ namespace vMe.Views
             waterLevel.WidthRequest = widthActive;
             runningLevel.WidthRequest = widthActive;
             batteryLevel.WidthRequest = widthActive;
+
+            heightActive = (int)Math.Round(height);
+            var h = height / 5;
+            double height30 = h;
+            Console.WriteLine(heightActive);
+            Console.WriteLine(height30);
+
+            dockContainer.HeightRequest = height30;
         }
 
         public void UiUpdate()

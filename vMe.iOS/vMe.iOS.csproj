@@ -182,59 +182,165 @@
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\1024pt.png">
       <Visible>false</Visible>
     </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\water10.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\water10.imageset\water10.png" />
-    <ImageAsset Include="Assets.xcassets\water10.imageset\water10-1.png" />
-    <ImageAsset Include="Assets.xcassets\water10.imageset\water10-2.png" />
-    <ImageAsset Include="Assets.xcassets\water50.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\water50.imageset\water50.png" />
-    <ImageAsset Include="Assets.xcassets\water50.imageset\water50-1.png" />
-    <ImageAsset Include="Assets.xcassets\water50.imageset\water50-2.png" />
-    <ImageAsset Include="Assets.xcassets\water80.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\water80.imageset\water80.png" />
-    <ImageAsset Include="Assets.xcassets\water80.imageset\water80-1.png" />
-    <ImageAsset Include="Assets.xcassets\water80.imageset\water80-2.png" />
-    <ImageAsset Include="Assets.xcassets\water100.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\water100.imageset\water100.png" />
-    <ImageAsset Include="Assets.xcassets\water100.imageset\water100-1.png" />
-    <ImageAsset Include="Assets.xcassets\water100.imageset\water100-2.png" />
-    <ImageAsset Include="Assets.xcassets\battery10.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\battery10.imageset\battery10.png" />
-    <ImageAsset Include="Assets.xcassets\battery10.imageset\battery10-1.png" />
-    <ImageAsset Include="Assets.xcassets\battery10.imageset\battery10-2.png" />
-    <ImageAsset Include="Assets.xcassets\battery50.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\battery50.imageset\battery50.png" />
-    <ImageAsset Include="Assets.xcassets\battery50.imageset\battery50-1.png" />
-    <ImageAsset Include="Assets.xcassets\battery50.imageset\battery50-2.png" />
-    <ImageAsset Include="Assets.xcassets\battery80.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\battery80.imageset\battery80.png" />
-    <ImageAsset Include="Assets.xcassets\battery80.imageset\battery80-1.png" />
-    <ImageAsset Include="Assets.xcassets\battery80.imageset\battery80-2.png" />
-    <ImageAsset Include="Assets.xcassets\battery100.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\battery100.imageset\battery100.png" />
-    <ImageAsset Include="Assets.xcassets\battery100.imageset\battery100-1.png" />
-    <ImageAsset Include="Assets.xcassets\battery100.imageset\battery100-2.png" />
-    <ImageAsset Include="Assets.xcassets\happy_robot.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\happy_robot.imageset\happy_robot.png" />
-    <ImageAsset Include="Assets.xcassets\happy_robot.imageset\happy_robot-1.png" />
-    <ImageAsset Include="Assets.xcassets\happy_robot.imageset\happy_robot-2.png" />
-    <ImageAsset Include="Assets.xcassets\sad_robot.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\sad_robot.imageset\sad_robot.png" />
-    <ImageAsset Include="Assets.xcassets\sad_robot.imageset\sad_robot-1.png" />
-    <ImageAsset Include="Assets.xcassets\sad_robot.imageset\sad_robot-2.png" />
-    <ImageAsset Include="Assets.xcassets\lowPower_robot.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\lowPower_robot.imageset\lowPower_robot.png" />
-    <ImageAsset Include="Assets.xcassets\lowPower_robot.imageset\lowPower_robot-1.png" />
-    <ImageAsset Include="Assets.xcassets\lowPower_robot.imageset\lowPower_robot-2.png" />
-    <ImageAsset Include="Assets.xcassets\lowWater_robot.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\lowWater_robot.imageset\lowWater_robot.png" />
-    <ImageAsset Include="Assets.xcassets\lowWater_robot.imageset\lowWater_robot-1.png" />
-    <ImageAsset Include="Assets.xcassets\lowWater_robot.imageset\lowWater_robot-2.png" />
-    <ImageAsset Include="Assets.xcassets\battery.imageset\battery-3.png" />
-    <ImageAsset Include="Assets.xcassets\battery.imageset\battery.png" />
-    <ImageAsset Include="Assets.xcassets\battery.imageset\battery-1.png" />
-    <ImageAsset Include="Assets.xcassets\waterDrop.imageset\waterDrop-3.png" />
-    <ImageAsset Include="Assets.xcassets\waterDrop.imageset\waterDrop-2.png" />
+    <ImageAsset Include="Assets.xcassets\water10.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\water10.imageset\water10.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\water10.imageset\water10-1.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\water10.imageset\water10-2.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\water50.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\water50.imageset\water50.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\water50.imageset\water50-1.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\water50.imageset\water50-2.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\water80.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\water80.imageset\water80.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\water80.imageset\water80-1.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\water80.imageset\water80-2.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\water100.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\water100.imageset\water100.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\water100.imageset\water100-1.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\water100.imageset\water100-2.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\battery10.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\battery10.imageset\battery10.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\battery10.imageset\battery10-1.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\battery10.imageset\battery10-2.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\battery50.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\battery50.imageset\battery50.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\battery50.imageset\battery50-1.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\battery50.imageset\battery50-2.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\battery80.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\battery80.imageset\battery80.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\battery80.imageset\battery80-1.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\battery80.imageset\battery80-2.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\battery100.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\battery100.imageset\battery100.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\battery100.imageset\battery100-1.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\battery100.imageset\battery100-2.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\happy_robot.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\happy_robot.imageset\happy_robot.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\happy_robot.imageset\happy_robot-1.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\happy_robot.imageset\happy_robot-2.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\sad_robot.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\sad_robot.imageset\sad_robot.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\sad_robot.imageset\sad_robot-1.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\sad_robot.imageset\sad_robot-2.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\lowPower_robot.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\lowPower_robot.imageset\lowPower_robot.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\lowPower_robot.imageset\lowPower_robot-1.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\lowPower_robot.imageset\lowPower_robot-2.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\lowWater_robot.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\lowWater_robot.imageset\lowWater_robot.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\lowWater_robot.imageset\lowWater_robot-1.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\lowWater_robot.imageset\lowWater_robot-2.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\battery.imageset\battery-3.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\battery.imageset\battery.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\battery.imageset\battery-1.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\waterDrop.imageset\waterDrop-3.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\waterDrop.imageset\waterDrop-2.png">
+      <Visible>false</Visible>
+    </ImageAsset>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
