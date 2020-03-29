@@ -8,14 +8,9 @@ using Xamarin.Essentials;
 namespace vMe
 {
     public partial class Application : Xamarin.Forms.Application
-    {
-        private TimeKeeper timeKeeper = new TimeKeeper();
-
+    {        
         public Application()
-        {           
-            
-
-            //DependencyService.Register<MockDataStore>();
+        {   
             MainPage = new MainPage();
         }
 

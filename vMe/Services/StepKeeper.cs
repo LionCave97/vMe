@@ -15,25 +15,27 @@ namespace vMe.Services
 
         public int RobotCounts
         {
+            
             get
             {
 
                 if (Application.Current.Properties.ContainsKey(stepKey))
                 {
-
+                    Console.WriteLine("Get steps " + (int)Application.Current.Properties[stepKey]);
                     return (int)Application.Current.Properties[stepKey];
 
 
                 }
                 else
                 {
-
+                    Console.WriteLine("Get 0 steps ");
                     return 0;
                 }
             }
 
             set
-            {               
+            {
+                Console.WriteLine("Add steps " + value);
                 Application.Current.Properties[stepKey] = value;         
 
 
