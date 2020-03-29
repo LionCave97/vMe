@@ -13,15 +13,15 @@
                         <viewControllerLayoutGuide type="bottom" id="9ZL-r4-8FZ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="yd7-JS-zBw">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="23">
-                                <rect key="frame" x="110" y="280" width="195" height="131"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="Logo" id="23" layoutMarginsFollowReadableWidth="YES">
+                                <rect key="frame" x="67" y="262" width="281" height="211"/>
                                 <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="vMe" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="641" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
-                                <rect key="frame" x="-211" y="613" width="836" height="126"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="vMe" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="641" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" preferredMaxLayoutWidth="1126">
+                                <rect key="frame" x="-356" y="615" width="1126" height="126"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40" weight="semibold"/>
                                 <color key="textColor" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace" white="1" alpha="1"/>
                                 <nil key="highlightedColor"/>
@@ -35,7 +35,7 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemOrangeColor" colorSpace="custom" customColorSpace="sRGB" red="1" green="0.584313725490196" blue="0" alpha="1"/>
                         <constraints>
-                            <constraint firstItem="23" firstAttribute="centerY" secondItem="yd7-JS-zBw" secondAttribute="centerY" priority="1" id="39"/>
+                            <constraint firstItem="23" firstAttribute="centerY" secondItem="yd7-JS-zBw" secondAttribute="centerY" priority="1" id="39" constant="-0.5"/>
                             <constraint firstItem="23" firstAttribute="centerX" secondItem="yd7-JS-zBw" secondAttribute="centerX" priority="1" id="41"/>
                         </constraints>
                     </view>

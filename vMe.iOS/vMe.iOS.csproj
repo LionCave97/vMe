@@ -341,6 +341,7 @@
     <ImageAsset Include="Assets.xcassets\waterDrop.imageset\waterDrop-2.png">
       <Visible>false</Visible>
     </ImageAsset>
+    <BundleResource Include="Resources\splash.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />

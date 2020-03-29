@@ -24,6 +24,7 @@ namespace vMe.Views
         //Setup variable
         double widthActive = 0;
         double heightActive = 0;
+        double width3 = 0;
 
 
         //Menu config
@@ -41,7 +42,7 @@ namespace vMe.Views
             UiUpdate();
         }
 
-        public void Setup()
+        private void Setup()
         {
             var mainDisplayInfo = DeviceDisplay.MainDisplayInfo;
             var width = mainDisplayInfo.Width / mainDisplayInfo.Density;
@@ -49,20 +50,21 @@ namespace vMe.Views
 
             dockContainer.WidthRequest = width;
             widthActive = (int)Math.Round(width);
-            var v = width / 3;
-            v -= 15;
-            widthActive = v;
-            waterLevel.WidthRequest = widthActive;
-            runningLevel.WidthRequest = widthActive;
-            batteryLevel.WidthRequest = widthActive;
+            width3 = width / 3;
+            width3 -= 15;
+            waterLevel.WidthRequest = width3;
+            runningLevel.WidthRequest = width3;
+            batteryLevel.WidthRequest = width3;
 
             heightActive = (int)Math.Round(height);
-            var h = height / 5;
-            double height30 = h;
+            var h = height * 0.25;
             Console.WriteLine(heightActive);
-            Console.WriteLine(height30);
+            Console.WriteLine(h);
 
-            dockContainer.HeightRequest = height30;
+            dockContainer.HeightRequest = h;
+            waterLevel.HeightRequest = h;
+            runningLevel.HeightRequest = h;
+            batteryLevel.HeightRequest = h;
         }
 
         public void UiUpdate()
@@ -159,7 +161,7 @@ namespace vMe.Views
             if (waterTappedState)
             {
                 Console.WriteLine("true");
-                waterLevel.WidthRequest = widthActive;
+                waterLevel.WidthRequest = width3;
                 waterTappedState = false;
 
                 waterLevel.IsVisible = true;
@@ -178,7 +180,7 @@ namespace vMe.Views
                 waterLevel.IsVisible = true;
                 runningLevel.IsVisible = false;
                 batteryLevel.IsVisible = false;
-                waterLevel.WidthRequest = 394;
+                waterLevel.WidthRequest = widthActive;
 
                 waterLevel.RaiseChild(waterDropPic);
                 waterLabel.IsVisible = true;
@@ -196,7 +198,7 @@ namespace vMe.Views
             if (runningTappedState)
             {
                 Console.WriteLine("true");
-                runningLevel.WidthRequest = widthActive;
+                runningLevel.WidthRequest = width3;
                 runningTappedState = false;
 
                 waterLevel.IsVisible = true;
@@ -214,7 +216,7 @@ namespace vMe.Views
                 waterLevel.IsVisible = false;
                 runningLevel.IsVisible = true;
                 batteryLevel.IsVisible = false;
-                runningLevel.WidthRequest = 394;
+                runningLevel.WidthRequest = widthActive;
 
                 runningLevel.RaiseChild(waterDropPic);
                 runningLabel.IsVisible = true;
@@ -229,7 +231,7 @@ namespace vMe.Views
             if (batteryTappedState)
             {
                 Console.WriteLine("true");
-                batteryLevel.WidthRequest = widthActive;
+                batteryLevel.WidthRequest = width3;
                 batteryTappedState = false;
 
                 waterLevel.IsVisible = true;
@@ -247,7 +249,7 @@ namespace vMe.Views
                 waterLevel.IsVisible = false;
                 runningLevel.IsVisible = false;
                 batteryLevel.IsVisible = true;
-                batteryLevel.WidthRequest = 394;
+                batteryLevel.WidthRequest = widthActive;
 
                 batteryLevel.RaiseChild(waterDropPic);
                 batteryLabel.IsVisible = true;

@@ -18,13 +18,32 @@ namespace vMe.Views
         private FluidKeeper fluid = new FluidKeeper();
         private EnergyKeeper energy = new EnergyKeeper();
 
+        //Setup variable
+        double widthActive = 0;
+        double heightActive = 0;
 
         public RobotPage()
         {
             InitializeComponent();
+            Setup();
             Update();
             Startup();
             Console.WriteLine("RobotState Start");
+        }
+
+        private void Setup()
+        {
+            var mainDisplayInfo = DeviceDisplay.MainDisplayInfo;
+            var width = mainDisplayInfo.Width / mainDisplayInfo.Density;
+            var height = mainDisplayInfo.Height / mainDisplayInfo.Density;
+
+            heightActive = (int)Math.Round(height);
+            var h = height * 0.55;
+            double heightSet = h;
+
+            Console.WriteLine(heightSet);
+
+            robotSprite.HeightRequest = heightSet;
         }
 
         public void Update()
@@ -100,7 +119,7 @@ namespace vMe.Views
         {
             timer = new Timer();
 
-            timer.Interval = 10000;
+            timer.Interval = 5000;
             timer.Enabled = true;
             timer.Elapsed += updateTimedData;
             timer.Start();

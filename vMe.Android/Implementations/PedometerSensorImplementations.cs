@@ -1,4 +1,5 @@
 ﻿using System;
+using Android.Hardware;
 using vMe.Droid.Implementations;
 using vMe.Services;
 
@@ -19,6 +20,7 @@ namespace vMe.Droid.Implementations
         public void Getsteps()
         {
             Console.WriteLine("Can Count steps Android " + "False");
+            Console.WriteLine(SensorType.StepCounter);
         }
     }
 }
