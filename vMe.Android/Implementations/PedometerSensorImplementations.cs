@@ -24,6 +24,7 @@ namespace vMe.Droid.Implementations
             if (CrossDeviceSensors.Current.Pedometer.IsSupported)
             {
                 CrossDeviceSensors.Current.Pedometer.OnReadingChanged += (s, a) => {
+
                     Console.WriteLine("Step updated");
 
                     steps.RobotCounts = CrossDeviceSensors.Current.Pedometer.LastReading;

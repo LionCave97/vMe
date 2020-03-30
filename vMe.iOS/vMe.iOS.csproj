@@ -342,6 +342,22 @@
       <Visible>false</Visible>
     </ImageAsset>
     <BundleResource Include="Resources\splash.png" />
+    <ImageAsset Include="Assets.xcassets\runningMan10.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\runningMan10.imageset\runningMan10.png" />
+    <ImageAsset Include="Assets.xcassets\runningMan10.imageset\runningMan10-1.png" />
+    <ImageAsset Include="Assets.xcassets\runningMan10.imageset\runningMan10-2.png" />
+    <ImageAsset Include="Assets.xcassets\runningMan50.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\runningMan50.imageset\runningMan50.png" />
+    <ImageAsset Include="Assets.xcassets\runningMan50.imageset\runningMan50-1.png" />
+    <ImageAsset Include="Assets.xcassets\runningMan50.imageset\runningMan50-2.png" />
+    <ImageAsset Include="Assets.xcassets\runningMan80.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\runningMan80.imageset\runningMan80.png" />
+    <ImageAsset Include="Assets.xcassets\runningMan80.imageset\runningMan80-1.png" />
+    <ImageAsset Include="Assets.xcassets\runningMan80.imageset\runningMan80-2.png" />
+    <ImageAsset Include="Assets.xcassets\runningMan100.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\runningMan100.imageset\runningMan100.png" />
+    <ImageAsset Include="Assets.xcassets\runningMan100.imageset\runningMan100-1.png" />
+    <ImageAsset Include="Assets.xcassets\runningMan100.imageset\runningMan100-2.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -381,5 +397,9 @@
     <Folder Include="Assets.xcassets\sad_robot.imageset\" />
     <Folder Include="Assets.xcassets\lowPower_robot.imageset\" />
     <Folder Include="Assets.xcassets\lowWater_robot.imageset\" />
+    <Folder Include="Assets.xcassets\runningMan10.imageset\" />
+    <Folder Include="Assets.xcassets\runningMan50.imageset\" />
+    <Folder Include="Assets.xcassets\runningMan80.imageset\" />
+    <Folder Include="Assets.xcassets\runningMan100.imageset\" />
   </ItemGroup>
 </Project>

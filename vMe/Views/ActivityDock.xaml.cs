@@ -110,7 +110,32 @@ namespace vMe.Views
                 int stepCount = step.RobotCounts;
                 string stepCounts = stepCount.ToString();
                 Console.WriteLine("Steps taken " + stepCounts);
-                runningLabel.Text = "You have taken " + stepCounts + " steps today";
+                
+                if (stepCount >= 500)
+                {
+                    runningManPic.Source = "runningMan";
+                    runningLabel.Text = "You have taken " + stepCounts + " out of 10000 steps today";
+                }
+                if (stepCount >= 1000)
+                {
+                    runningManPic.Source = "runningMan10";
+                    runningLabel.Text = "You have taken " + stepCounts + " out of 10000 steps today";
+                }
+                if (stepCount >= 5000)
+                {
+                    runningManPic.Source = "runningMan50";
+                    runningLabel.Text = "You have taken " + stepCounts + " out of 10000 steps today";
+                }
+                if (stepCount >= 8000)
+                {
+                    runningManPic.Source = "runningMan80";
+                    runningLabel.Text = "You have taken " + stepCounts + " out of 10000 steps today";
+                }
+                if (stepCount >= 10000)
+                {
+                    runningManPic.Source = "runningMan100";
+                    runningLabel.Text = "Well done! You have taken " + stepCounts + " out of 10000 steps today";
+                }
 
                 //Fluid Ui Update
                 int fluidCount = fluid.FluidCount;
@@ -180,7 +205,7 @@ namespace vMe.Views
                 waterLevel.IsVisible = true;
                 runningLevel.IsVisible = false;
                 batteryLevel.IsVisible = false;
-                waterLevel.WidthRequest = widthActive;
+                waterLevel.WidthRequest = widthActive - 20;
 
                 waterLevel.RaiseChild(waterDropPic);
                 waterLabel.IsVisible = true;
@@ -216,7 +241,7 @@ namespace vMe.Views
                 waterLevel.IsVisible = false;
                 runningLevel.IsVisible = true;
                 batteryLevel.IsVisible = false;
-                runningLevel.WidthRequest = widthActive;
+                runningLevel.WidthRequest = widthActive - 20;
 
                 runningLevel.RaiseChild(waterDropPic);
                 runningLabel.IsVisible = true;
@@ -249,7 +274,7 @@ namespace vMe.Views
                 waterLevel.IsVisible = false;
                 runningLevel.IsVisible = false;
                 batteryLevel.IsVisible = true;
-                batteryLevel.WidthRequest = widthActive;
+                batteryLevel.WidthRequest = widthActive - 20;
 
                 batteryLevel.RaiseChild(waterDropPic);
                 batteryLabel.IsVisible = true;
