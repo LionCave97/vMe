@@ -4,7 +4,7 @@ using Android.Hardware;
 using Android.Content;
 using vMe.Droid.Implementations;
 using vMe.Services;
-
+using Plugin.DeviceSensors;
 
 [assembly: Xamarin.Forms.Dependency(typeof(PedometerSensorImplementations))]
 namespace vMe.Droid.Implementations
@@ -12,33 +12,33 @@ namespace vMe.Droid.Implementations
     public class PedometerSensorImplementations : PedometerSensor
     {
         private StepKeeper steps = new StepKeeper();
-        private StepService stepGet = new StepService();
 
         public DeviceSteps GetPedometer()
         {
-
             Startup();
-            Getsteps();
-            return DeviceSteps.Still;
-
-            
+            return DeviceSteps.Still;            
         }
 
         private void Startup()
         {
-            var stepServiceIntent = new Intent("using Android.Content");
-            
-            Console.WriteLine("It has booted");
-        }
+            if (CrossDeviceSensors.Current.Pedometer.IsSupported)
+            {
+                CrossDeviceSensors.Current.Pedometer.OnReadingChanged += (s, a) => {
+                    Console.WriteLine("Step updated");
 
-        public void Getsteps()
-        {
-            Console.WriteLine("Can Count steps Android " + "False");
-            Console.WriteLine(Convert.ToInt32(stepGet.StepsToday));
-            
-            
-        }
+                    steps.RobotCounts = CrossDeviceSensors.Current.Pedometer.LastReading;
+                };
+                
+                if (!CrossDeviceSensors.Current.Pedometer.IsActive)
+                {
+                    CrossDeviceSensors.Current.Pedometer.StartReading();
+                }
+                
+                Console.WriteLine("Latest steps " + CrossDeviceSensors.Current.Pedometer.LastReading);
 
+            }
+
+        }
 
 
     }
