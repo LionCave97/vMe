@@ -2,6 +2,7 @@
 using Xamarin.Essentials;
 using vMe.Views;
 
+//Manages the Accelerometer and will increase the energy of the robot.
 
 namespace vMe.Services
 {
@@ -16,6 +17,7 @@ namespace vMe.Services
 
         public class AccelerometerTest
         {
+            //
             private EnergyKeeper energyLevel = new EnergyKeeper();
 
             // Set speed delay for monitoring changes.
@@ -27,9 +29,10 @@ namespace vMe.Services
                 Accelerometer.ReadingChanged += Accelerometer_ReadingChanged;
             }
 
+            //This will check the Y Axis and call the increaseEnergy Funcion if needed
             void Accelerometer_ReadingChanged(object sender, AccelerometerChangedEventArgs e)
             {
-                
+                 
                 float yFloat = 0;
                 var data = e.Reading;
                 //Console.WriteLine("Reading Data!");
@@ -43,14 +46,10 @@ namespace vMe.Services
                     energyLevel.increaseEnergy();
                     var Activity = new ActivityDock();
                     Activity.UiUpdate();
-
-
                 }
-
-
-
             }
 
+            //Checks Accelerometer state used in the App.xaml.cs to stop and start the sensor according to OnStart/OnSleep/OnResume
             public bool CheckAccelerometer()
             {
                 bool running = false;
@@ -62,7 +61,7 @@ namespace vMe.Services
 
                 return running;
             }
-
+            //This will Toggle the Accelerometer On or Off
             public void ToggleAccelerometer()
             {
                 Console.WriteLine("Toggle Accelerometer");

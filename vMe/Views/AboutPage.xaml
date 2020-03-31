@@ -36,6 +36,16 @@
                         </FormattedString>
                     </Label.FormattedText>
                 </Label>
+                <Label FontSize="24" Margin="20, 0, 20, 0" TextColor="White">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <FormattedString.Spans>
+                                <Span Text="Github: " FontAttributes="Bold" FontSize="22" />
+                                <Span Text="vMe" FontAttributes="Bold" FontSize="22" />
+                            </FormattedString.Spans>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
 
                 <Button Text="Dev Reset" Clicked="Button_Clicked"></Button>
             </StackLayout>

@@ -356,6 +356,14 @@
     <ImageAsset Include="Assets.xcassets\steps_robot.imageset\steps_robot.png" />
     <ImageAsset Include="Assets.xcassets\steps_robot.imageset\steps_robot-1.png" />
     <ImageAsset Include="Assets.xcassets\steps_robot.imageset\steps_robot-2.png" />
+    <ImageAsset Include="Assets.xcassets\charging1_robot.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\charging1_robot.imageset\charging1_robot.png" />
+    <ImageAsset Include="Assets.xcassets\charging1_robot.imageset\charging1_robot-1.png" />
+    <ImageAsset Include="Assets.xcassets\charging1_robot.imageset\charging1_robot-2.png" />
+    <ImageAsset Include="Assets.xcassets\charging2_robot.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\charging2_robot.imageset\charging2_robot.png" />
+    <ImageAsset Include="Assets.xcassets\charging2_robot.imageset\charging2_robot-1.png" />
+    <ImageAsset Include="Assets.xcassets\charging2_robot.imageset\charging2_robot-2.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -400,5 +408,7 @@
     <Folder Include="Assets.xcassets\runningMan80.imageset\" />
     <Folder Include="Assets.xcassets\runningMan100.imageset\" />
     <Folder Include="Assets.xcassets\steps_robot.imageset\" />
+    <Folder Include="Assets.xcassets\charging1_robot.imageset\" />
+    <Folder Include="Assets.xcassets\charging2_robot.imageset\" />
   </ItemGroup>
 </Project>

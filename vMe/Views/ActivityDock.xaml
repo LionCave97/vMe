@@ -24,7 +24,7 @@
                                    x:Name="waterLevel">
                        <ImageButton Source="waterDrop" x:Name="waterDropPic"
                               VerticalOptions="CenterAndExpand"
-                              HorizontalOptions="EndAndExpand"
+                              HorizontalOptions="CenterAndExpand"
                               Margin="5, 25, 5, 25" BackgroundColor="Transparent" Clicked="waterTapped" >
                               </ImageButton>
                        <StackLayout x:Name="waterMenu" VerticalOptions="End"
@@ -33,7 +33,7 @@
                                   Text="You need to drink more water" WidthRequest="180"
                                   Margin="100, 30, 1, 0"  ></Label>
                            <Button IsVisible="false" x:Name="waterButton"
-                                   Text="Drank a glass Water" WidthRequest="200"
+                                   Text="Drink a glass Water" WidthRequest="200"
                                    Margin="100, 0, 10, 15" 
                                    Clicked="drinkWaterTapped"></Button>
                        </StackLayout>
@@ -43,7 +43,7 @@
                                    x:Name="runningLevel">
                        <ImageButton Source="runningMan"
                               VerticalOptions="CenterAndExpand" x:Name="runningManPic"
-                              HorizontalOptions="EndAndExpand"
+                              HorizontalOptions="CenterAndExpand"
                               Margin="5, 30, 5, 20" BackgroundColor="Transparent"  Clicked="runningTapped">
                               </ImageButton>
                        <StackLayout x:Name="runningMenu" VerticalOptions="End"
@@ -60,7 +60,7 @@
                                    x:Name="batteryLevel">
                        <ImageButton Source="battery"
                               VerticalOptions="CenterAndExpand" x:Name="batteryPic"
-                              HorizontalOptions="EndAndExpand"
+                              HorizontalOptions="CenterAndExpand"
                               Margin="15, 10, 5, 0" BackgroundColor="Transparent" Clicked="batteryTapped" Scale="1.2">
                               </ImageButton>
                        <StackLayout x:Name="batteryMenu" VerticalOptions="End"

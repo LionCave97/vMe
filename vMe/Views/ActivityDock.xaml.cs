@@ -18,7 +18,13 @@ namespace vMe.Views
         //Update
         private FluidKeeper fluid = new FluidKeeper();
         private StepKeeper step = new StepKeeper();
-        private EnergyKeeper energy = new EnergyKeeper();        
+        private EnergyKeeper energy = new EnergyKeeper();
+
+        private ProfilePage profile = new ProfilePage();
+
+        private static Timer timer;
+
+
 
 
         //Setup variable
@@ -47,6 +53,7 @@ namespace vMe.Views
             var width = mainDisplayInfo.Width / mainDisplayInfo.Density;
             var height = mainDisplayInfo.Height / mainDisplayInfo.Density;
 
+
             dockContainer.WidthRequest = width;
             widthActive = (int)Math.Round(width);
             width3 = width / 3;
@@ -54,6 +61,11 @@ namespace vMe.Views
             waterLevel.WidthRequest = width3;
             runningLevel.WidthRequest = width3;
             batteryLevel.WidthRequest = width3;
+
+            width3 -= 15;
+            waterDropPic.WidthRequest = width3;
+            runningManPic.WidthRequest = width3;
+            batteryPic.WidthRequest = width3;
 
             heightActive = (int)Math.Round(height);
             var h = height * 0.25;
@@ -64,15 +76,15 @@ namespace vMe.Views
             waterLevel.HeightRequest = h;
             runningLevel.HeightRequest = h;
             batteryLevel.HeightRequest = h;
+            FastStartTime();
         }
 
         public void UiUpdate()
         {
+            
+            
             MainThread.BeginInvokeOnMainThread(() =>
             {
-                Console.WriteLine(DependencyService.Get<PedometerSensor>().GetPedometer().ToString());
-            Console.WriteLine("UpdateUi");
-
                 //Battery/Energy Ui Update
                 int battery = energy.RobotEnergy;
                 string sBatteryCount = battery.ToString();
@@ -289,6 +301,22 @@ namespace vMe.Views
             Console.WriteLine(fluid.FluidCount);
             UiUpdate();
             
+        }
+
+        private void FastStartTime()
+        {
+            timer = new Timer();
+
+            timer.Interval = 1000;
+            timer.Enabled = true;
+            timer.Elapsed += updateFast;
+            timer.Start();
+
+        }
+        private void updateFast(object sender, ElapsedEventArgs e)
+        {
+            UiUpdate();
+
         }
     }
 }

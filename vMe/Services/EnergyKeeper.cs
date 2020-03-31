@@ -87,6 +87,7 @@ namespace vMe.Services
         public void decreaseEnergy()
         {
             RobotEnergy -= 5;
+            OldRobotEnergy = RobotEnergy;
         }
 
         public void increaseEnergy()

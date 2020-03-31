@@ -4,13 +4,13 @@
         <StackLayout BackgroundColor="#2e86ab">
         <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand" Padding="0" Margin="0, 30, 0, 0">
             <Image Source="idle_robot" VerticalOptions="CenterAndExpand"
-                   HeightRequest="440"></Image>
+                   HeightRequest="440" x:Name="robotSprite"></Image>
 
         </StackLayout>
 
             <StackLayout 
                      HeightRequest="200" Padding="0" WidthRequest="600" 
-                     BackgroundColor="#2d3047" HorizontalOptions="End">
+                     BackgroundColor="#2d3047" HorizontalOptions="End" x:Name="details">
 
                 <Label Text="I am feeling good!" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" TextColor="White" FontSize="Large" FontAttributes="Bold" x:Name="state"></Label>
 

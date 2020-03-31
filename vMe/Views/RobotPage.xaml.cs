@@ -72,7 +72,6 @@ namespace vMe.Views
 
                 }
 
-
                 if (fluidCount <= 50)
                 {
                     lowFluid = true;
@@ -84,8 +83,6 @@ namespace vMe.Views
                     lowSteps = true;
                     robotSprite.Source = "steps_robot";
                 }
-
-
 
                 if (lowFluid && lowPower && lowSteps)
                 {
@@ -115,7 +112,7 @@ namespace vMe.Views
                         activity.UiUpdate();
                     }                 
 
-                    
+                     
 
                 }
 
@@ -171,7 +168,6 @@ namespace vMe.Views
             activity.UiUpdate();
             
         }
-
 
         private void StartTime()
         {
