@@ -10,6 +10,8 @@ using System.Timers;
 using Xamarin.Forms;
 using Xamarin.Essentials;
 
+//RobotPage
+//This is the 'HomeScreen' of the App
 namespace vMe.Views
 {
     public partial class RobotPage : ContentPage
@@ -38,6 +40,7 @@ namespace vMe.Views
             Console.WriteLine("RobotState Start");
         }
 
+        //Sets the Robot Sprite size according to the display size
         private void Setup()
         {
             var mainDisplayInfo = DeviceDisplay.MainDisplayInfo;
@@ -53,6 +56,8 @@ namespace vMe.Views
             robotSprite.HeightRequest = heightSet;
         }
 
+        //Updates the RobotSprite according to the RobotState
+        //The charging effect is triggered from here
         public void Update()
         {
             MainThread.BeginInvokeOnMainThread(() =>
@@ -93,6 +98,7 @@ namespace vMe.Views
             
         }
 
+        //Charging effect
         public void charging()
         {
             Console.WriteLine("Charging Loop!");
@@ -110,6 +116,7 @@ namespace vMe.Views
             
         }
 
+        //Startup 
         public void Startup()
         {
             HoverRobot();
@@ -117,6 +124,7 @@ namespace vMe.Views
             FastStartTime();
         }        
 
+        //Hover Animation
         public async void HoverRobot()
         {
             await robotSprite.TranslateTo(0, 10, 500);
@@ -124,6 +132,8 @@ namespace vMe.Views
             await robotSprite.TranslateTo(0, -10, 500);
             await robotSprite.TranslateTo(0, 0, 1000);
         }
+
+        //Ui Update Timer
         private void FastStartTime()
         {
             timer = new Timer();
@@ -141,6 +151,7 @@ namespace vMe.Views
             
         }
 
+        //Trigger HoverRobot
         private void StartTime()
         {
             timer = new Timer();

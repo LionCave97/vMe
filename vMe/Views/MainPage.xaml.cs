@@ -6,6 +6,8 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using vMe.Models;
 
+//MainPage
+//Burger Menu and RobotPage injection
 namespace vMe.Views
 {
     // Learn more about making custom code visible in the Xamarin.Forms previewer

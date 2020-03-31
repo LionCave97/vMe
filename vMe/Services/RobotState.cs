@@ -2,6 +2,8 @@
 
 using Xamarin.Forms;
 
+//Main state manger
+//Primarly used on ActivityDock, RobotPage and ProfilePage
 namespace vMe.Services
 {
     public class RobotState : ContentView
@@ -11,6 +13,7 @@ namespace vMe.Services
 
         }
 
+        //Generates the state of the Robot Sprite
         public string RobotSprite(bool lowPower, bool lowFluid, bool lowSteps)
         {
 
@@ -46,6 +49,7 @@ namespace vMe.Services
             return state;
         }
 
+        //Generate the Icon states
         public bool ActivityState(int val, string str)
         {
             bool low = false;

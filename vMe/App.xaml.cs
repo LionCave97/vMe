@@ -5,6 +5,8 @@ using vMe.Services;
 using vMe.Views;
 using Xamarin.Essentials;
 
+//Main App
+//This turns the Accelerometer On and Off according to the device state
 namespace vMe
 {
     public partial class Application : Xamarin.Forms.Application

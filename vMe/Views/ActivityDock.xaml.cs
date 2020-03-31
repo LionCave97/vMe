@@ -10,6 +10,9 @@ using vMe.Services;
 using System.Timers;
 using Xamarin.Essentials;
 
+//Main logic of the app
+//Everything basically gets run through this
+//It is used as a window in RobotPage
 namespace vMe.Views
 {
     [DesignTimeVisible(false)]
@@ -20,13 +23,9 @@ namespace vMe.Views
         private StepKeeper steps  = new StepKeeper();
         private EnergyKeeper energy = new EnergyKeeper();
         private RobotState state = new RobotState();
-
         private ProfilePage profile = new ProfilePage();
 
         private static Timer timer;
-
-
-
 
         //Setup variable
         double widthActive = 0;
@@ -39,6 +38,7 @@ namespace vMe.Views
         bool runningTappedState = false;
         bool batteryTappedState = false;
 
+        //Initialize
         public ActivityDock()
         {            
             InitializeComponent();
@@ -48,6 +48,7 @@ namespace vMe.Views
             UiUpdate();
         }
 
+        //Setup Dock according to the display
         public void Setup()
         {
             var mainDisplayInfo = DeviceDisplay.MainDisplayInfo;
@@ -79,10 +80,10 @@ namespace vMe.Views
             FastStartTime();
         }
 
+        //Updates the whole Activity dock
+        //Warning: Do not call the UiUpdate from an external function or Method as it is unreliable at best
         public void UiUpdate()
-        {
-            
-            
+        {      
             MainThread.BeginInvokeOnMainThread(() =>
             {
                 //Battery/Energy Ui Update
@@ -152,13 +153,11 @@ namespace vMe.Views
 
                 waterDropPic.Margin = new Thickness(12, 40, 0, 20);
                 waterDropPic.WidthRequest = -1;
-
-
-
             });
         }       
 
-               
+        //Manages the Activity icons if taped
+        //This allows the different section to pop and retract
         void waterTapped(System.Object sender, System.EventArgs e)
         {
             UiUpdate();
@@ -272,6 +271,8 @@ namespace vMe.Views
             
         }
 
+        //Force updates the Ui
+        //This is a work around for the Ui not always updating as it should
         private void FastStartTime()
         {
             timer = new Timer();

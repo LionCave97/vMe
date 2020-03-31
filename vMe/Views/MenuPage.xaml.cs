@@ -5,6 +5,7 @@ using System.ComponentModel;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
+//The actual Burger Menu
 namespace vMe.Views
 {
     // Learn more about making custom code visible in the Xamarin.Forms previewer

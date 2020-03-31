@@ -5,6 +5,7 @@ using Xamarin.Essentials;
 using vMe.Services;
 using System.Timers;
 
+//Profile Page
 namespace vMe.Views
 {
     public partial class ProfilePage : ContentPage
@@ -24,6 +25,7 @@ namespace vMe.Views
             Update();
         }
 
+        //Updates the whole ProfilePage
         public void Update()
         {
             int battery = energyK.RobotEnergy;
@@ -51,6 +53,7 @@ namespace vMe.Views
 
         }
 
+        //Updates the Ui
         private void FastStartTime()
         {
             timer = new Timer();
@@ -67,6 +70,7 @@ namespace vMe.Views
 
         }
 
+        //Sets the elements according to the display
         private void Setup()
         {
             var mainDisplayInfo = DeviceDisplay.MainDisplayInfo;

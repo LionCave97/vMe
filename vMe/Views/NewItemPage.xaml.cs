@@ -6,6 +6,10 @@ using Xamarin.Forms.Xaml;
 
 using vMe.Models;
 
+//Manges Burger Menu
+//Do not remove!!
+//The App will break!
+//I have not yet found where this is being used
 namespace vMe.Views
 {
     // Learn more about making custom code visible in the Xamarin.Forms previewer

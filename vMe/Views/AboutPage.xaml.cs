@@ -20,6 +20,7 @@ namespace vMe.Views
         private FluidKeeper fluid = new FluidKeeper();
         private EnergyKeeper energy = new EnergyKeeper();
 
+        //Developer button just to reset the app for testing
         void Button_Clicked(System.Object sender, System.EventArgs e)
         {
             Console.WriteLine("Reset Settings");

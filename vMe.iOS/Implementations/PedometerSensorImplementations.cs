@@ -5,6 +5,7 @@ using Foundation;
 using vMe.iOS.Implementations;
 using vMe.Views;
 
+//iOS Pedometer
 [assembly: Xamarin.Forms.Dependency(typeof(PedometerSensorImplementations))]
 namespace vMe.iOS.Implementations
 {
@@ -18,6 +19,7 @@ namespace vMe.iOS.Implementations
 
         private CMStepCounter stepCounter;
 
+        //Checks if Pedometer is availible
         public DeviceSteps GetPedometer()
         {
             Getsteps();
@@ -30,6 +32,7 @@ namespace vMe.iOS.Implementations
             return NSDate.FromTimeIntervalSinceReferenceDate((date - (new DateTime(2001, 1, 1, 0, 0, 0))).TotalSeconds);
         }
 
+        //Get steps of today
         public void Getsteps()
         {
             if (_resetTime.Date.Day != DateTime.Now.Date.Day)
@@ -47,15 +50,12 @@ namespace vMe.iOS.Implementations
             stepCounter.QueryStepCount(sMidnight, NSDate.Now, _queue, DailyStepQueryHandler);
         }
 
+        //Updates StepKeeper state
         private void DailyStepQueryHandler(nint stepCount, NSError error)
-        {            
-            
-            
-
+        {   
             if (steps.RobotCounts != (Int32)stepCount)
             {
                 steps.RobotCounts = (Int32)stepCount;
-                Console.WriteLine("Step count " + (Int32)stepCount);
 
                 var Activity = new ActivityDock();
                 Activity.UiUpdate();

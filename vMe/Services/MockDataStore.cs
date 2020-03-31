@@ -4,6 +4,10 @@ using System.Linq;
 using System.Threading.Tasks;
 using vMe.Models;
 
+//Manges Burger Menu
+//Do not remove!!
+//The App will break!
+//I have not yet found where this is being used
 namespace vMe.Services
 {
     public class MockDataStore : IDataStore<Item>

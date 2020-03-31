@@ -6,6 +6,7 @@ using vMe.Droid.Implementations;
 using vMe.Services;
 using Plugin.DeviceSensors;
 
+//Android Pedometer
 [assembly: Xamarin.Forms.Dependency(typeof(PedometerSensorImplementations))]
 namespace vMe.Droid.Implementations
 {
@@ -19,6 +20,7 @@ namespace vMe.Droid.Implementations
             return DeviceSteps.Still;            
         }
 
+        //Setup and monitor Pedometer
         private void Startup()
         {
             if (CrossDeviceSensors.Current.Pedometer.IsSupported)

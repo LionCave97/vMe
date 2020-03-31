@@ -11,6 +11,7 @@ using vMe.Models;
 using vMe.Views;
 using vMe.ViewModels;
 
+//Manges Burger Menu
 namespace vMe.Views
 {
     // Learn more about making custom code visible in the Xamarin.Forms previewer
