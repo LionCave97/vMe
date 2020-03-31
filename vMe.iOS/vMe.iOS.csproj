@@ -293,15 +293,6 @@
     <ImageAsset Include="Assets.xcassets\sad_robot.imageset\Contents.json">
       <Visible>false</Visible>
     </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\sad_robot.imageset\sad_robot.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\sad_robot.imageset\sad_robot-1.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\sad_robot.imageset\sad_robot-2.png">
-      <Visible>false</Visible>
-    </ImageAsset>
     <ImageAsset Include="Assets.xcassets\lowPower_robot.imageset\Contents.json">
       <Visible>false</Visible>
     </ImageAsset>
@@ -358,6 +349,13 @@
     <ImageAsset Include="Assets.xcassets\runningMan100.imageset\runningMan100.png" />
     <ImageAsset Include="Assets.xcassets\runningMan100.imageset\runningMan100-1.png" />
     <ImageAsset Include="Assets.xcassets\runningMan100.imageset\runningMan100-2.png" />
+    <ImageAsset Include="Assets.xcassets\sad_robot.imageset\sad_robot-3.png" />
+    <ImageAsset Include="Assets.xcassets\sad_robot.imageset\sad_robot.png" />
+    <ImageAsset Include="Assets.xcassets\sad_robot.imageset\sad_robot-1.png" />
+    <ImageAsset Include="Assets.xcassets\steps_robot.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\steps_robot.imageset\steps_robot.png" />
+    <ImageAsset Include="Assets.xcassets\steps_robot.imageset\steps_robot-1.png" />
+    <ImageAsset Include="Assets.xcassets\steps_robot.imageset\steps_robot-2.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -401,5 +399,6 @@
     <Folder Include="Assets.xcassets\runningMan50.imageset\" />
     <Folder Include="Assets.xcassets\runningMan80.imageset\" />
     <Folder Include="Assets.xcassets\runningMan100.imageset\" />
+    <Folder Include="Assets.xcassets\steps_robot.imageset\" />
   </ItemGroup>
 </Project>

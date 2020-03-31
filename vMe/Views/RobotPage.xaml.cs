@@ -15,8 +15,14 @@ namespace vMe.Views
     public partial class RobotPage : ContentPage
     {
         private static Timer timer;
+        private ActivityDock activity = new ActivityDock();
         private FluidKeeper fluid = new FluidKeeper();
         private EnergyKeeper energy = new EnergyKeeper();
+        private StepKeeper steps = new StepKeeper();
+
+        int loop = 0;
+        int step = 1;
+        
 
         //Setup variable
         double widthActive = 0;
@@ -51,9 +57,12 @@ namespace vMe.Views
             MainThread.BeginInvokeOnMainThread(() =>
             {
                 int battery = energy.RobotEnergy;
+                int oldbattery = energy.OldRobotEnergy;
                 int fluidCount = fluid.FluidCount;
+                int stepCount = steps.RobotCounts;
                 bool lowPower = false;
                 bool lowFluid = false;
+                bool lowSteps = false;
 
 
                 if (battery <= 50)
@@ -70,18 +79,65 @@ namespace vMe.Views
                     robotSprite.Source = "lowWater_robot";
                 }
 
+                if (stepCount <= 1000)
+                {
+                    lowSteps = true;
+                    robotSprite.Source = "steps_robot";
+                }
 
 
-                if (lowFluid && lowPower)
+
+                if (lowFluid && lowPower && lowSteps)
                 {
                     robotSprite.Source = "sad_robot";
-                }else if (!lowFluid && !lowPower)
+                }else if (!lowFluid && !lowPower && !lowSteps)
                 {
                     robotSprite.Source = "happy_robot";
                 }
 
+                Console.WriteLine("Battery: " + battery + " OldBattery: " + oldbattery);
+
+                if (battery != oldbattery)
+                {                 
+                    Console.WriteLine("Charging!");
+
+                    if (loop < 4)
+                    {
+                        charging();
+                        Console.WriteLine("Charging Pic!");
+                        loop += 1;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Charging else!");
+                        energy.OldRobotEnergy = energy.RobotEnergy;
+                        loop = 0;
+                        activity.UiUpdate();
+                    }                 
+
+                    
+
+                }
+
             });
 
+            
+        }
+
+        public void charging()
+        {
+            Console.WriteLine("Charging Loop!");
+            if (step == 1)
+            {
+                robotSprite.Source = "charging1_robot";
+                step += 1;
+            }
+            else
+            {
+                robotSprite.Source = "charging2_robot";
+                step -= 1;
+            }
+            
             
         }
 
@@ -112,6 +168,8 @@ namespace vMe.Views
         private void updateFast(object sender, ElapsedEventArgs e)
         {
             Update();
+            activity.UiUpdate();
+            
         }
 
 

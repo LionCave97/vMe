@@ -10,6 +10,7 @@ namespace vMe.Services
     class EnergyKeeper
     {
         const string energyKey = "robotEnergy";
+        const string OldenergyKey = "oldrobotEnergy";
         private TimeKeeper timeKeeper = new TimeKeeper();
         private static Timer timer;
 
@@ -39,7 +40,6 @@ namespace vMe.Services
 
             set
             {
-                    
                 if (value > 100)
                 {
                     Application.Current.Properties[energyKey] = 100;
@@ -51,11 +51,36 @@ namespace vMe.Services
                 else
                 {
                     Application.Current.Properties[energyKey] = value;
-                }
-                                  
-
+                }                
+                 
                 var Activity = new ActivityDock();
                 Activity.UiUpdate();
+            }
+        }
+
+        public int OldRobotEnergy
+        {
+            get
+            {
+
+                if (Application.Current.Properties.ContainsKey(OldenergyKey))
+                {
+                    Console.WriteLine("Get Old Battery" + (int)Application.Current.Properties[OldenergyKey]);
+                    return (int)Application.Current.Properties[OldenergyKey];                    
+
+                }
+                else
+                {
+
+                    return 0;
+                }
+            }
+
+            set
+            {
+                Console.WriteLine("Set Old Battery" + value);
+                Application.Current.Properties[OldenergyKey] = value;
+                
             }
         }
 

@@ -35,7 +35,6 @@ namespace vMe.Views
         public ActivityDock()
         {            
             InitializeComponent();
-
             Setup();
             fluid.getFluid();
             energy.getEnergy();
