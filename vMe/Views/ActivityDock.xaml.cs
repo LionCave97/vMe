@@ -17,8 +17,9 @@ namespace vMe.Views
     {
         //Update
         private FluidKeeper fluid = new FluidKeeper();
-        private StepKeeper step = new StepKeeper();
+        private StepKeeper steps  = new StepKeeper();
         private EnergyKeeper energy = new EnergyKeeper();
+        private RobotState state = new RobotState();
 
         private ProfilePage profile = new ProfilePage();
 
@@ -47,12 +48,11 @@ namespace vMe.Views
             UiUpdate();
         }
 
-        private void Setup()
+        public void Setup()
         {
             var mainDisplayInfo = DeviceDisplay.MainDisplayInfo;
             var width = mainDisplayInfo.Width / mainDisplayInfo.Density;
             var height = mainDisplayInfo.Height / mainDisplayInfo.Density;
-
 
             dockContainer.WidthRequest = width;
             widthActive = (int)Math.Round(width);
@@ -91,62 +91,32 @@ namespace vMe.Views
                 
                 if (battery >= 5)
                 {
-                    batteryPic.Source = "battery";
                     batteryLabel.Text = "Battery is at "+sBatteryCount+"% you need to recharge now!";
                 }
-                if (battery >= 10)
-                {
-                    batteryPic.Source = "battery10";
+                else
+                {                   
                     batteryLabel.Text = "Battery is at " + sBatteryCount + "%";
                 }
-                if (battery >= 50)
-                {
-                    batteryPic.Source = "battery50";
-                    batteryLabel.Text = "Battery is at " + sBatteryCount + "%";
-                }
-                if (battery >= 80)
-                {
-                    batteryPic.Source = "battery80";
-                    batteryLabel.Text = "Battery is at " + sBatteryCount + "%";
-                }
-                if (battery >= 100)
-                {
-                    batteryPic.Source = "battery100";
-                    batteryLabel.Text = "Battery is at " + sBatteryCount + "%";
-                }
+
+                batteryPic.Source = "battery"+state.IconState(battery, "null");
+
                 batteryPic.Margin = new Thickness(12, 40, 0, 20);
                 batteryPic.WidthRequest = -1;
 
                 //Steps Ui Update
-                int stepCount = step.RobotCounts;
+                int stepCount = steps.RobotCounts;
                 string stepCounts = stepCount.ToString();
                 Console.WriteLine("Steps taken " + stepCounts);
-                
-                if (stepCount >= 500)
-                {
-                    runningManPic.Source = "runningMan";
-                    runningLabel.Text = "You have taken " + stepCounts + " out of 10000 steps today";
-                }
-                if (stepCount >= 1000)
-                {
-                    runningManPic.Source = "runningMan10";
-                    runningLabel.Text = "You have taken " + stepCounts + " out of 10000 steps today";
-                }
-                if (stepCount >= 5000)
-                {
-                    runningManPic.Source = "runningMan50";
-                    runningLabel.Text = "You have taken " + stepCounts + " out of 10000 steps today";
-                }
-                if (stepCount >= 8000)
-                {
-                    runningManPic.Source = "runningMan80";
-                    runningLabel.Text = "You have taken " + stepCounts + " out of 10000 steps today";
-                }
+                                
                 if (stepCount >= 10000)
-                {
-                    runningManPic.Source = "runningMan100";
+                {                    
                     runningLabel.Text = "Well done! You have taken " + stepCounts + " out of 10000 steps today";
                 }
+                else
+                {
+                    runningLabel.Text = "You have taken " + stepCounts + " out of 10000 steps today";
+                }
+                runningManPic.Source = "runningMan" + state.IconState(stepCount, "step");
 
                 //Fluid Ui Update
                 int fluidCount = fluid.FluidCount;
@@ -158,29 +128,28 @@ namespace vMe.Views
                 }
                 if (fluidCount >= 10)
                 {
-                    waterDropPic.Source = "water10";
                     waterLabel.Text = "You have drink " + sFluidCount + "% of your daily intake. I feel a bit thirsty at this stage.";
                 }
                 if (fluidCount >= 50)
                 {
-                    waterDropPic.Source = "water50";
                     waterLabel.Text = "You have drink " + sFluidCount + "% of your daily intake";
                 }
                 if (fluidCount >= 80)
                 {
-                    waterDropPic.Source = "water80";
                     waterLabel.Text = "You have drink " + sFluidCount + "% of your daily intake. Almost there!";
                 }
                 if (fluidCount >= 100)
                 {
-                    waterDropPic.Source = "water100";
                     waterLabel.Text = "You have drink " + sFluidCount + "% of your daily intake. You have reached your goal!";
                 }
                 if (fluidCount >= 110)
                 {
-                    waterDropPic.Source = "water100";
+                    
                     waterLabel.Text = "You have drink " + sFluidCount + "% of your daily intake. I think that may be enough for now.";
                 }
+
+                waterDropPic.Source = "water" + state.IconState(fluidCount, "null");
+
                 waterDropPic.Margin = new Thickness(12, 40, 0, 20);
                 waterDropPic.WidthRequest = -1;
 

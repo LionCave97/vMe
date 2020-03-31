@@ -19,6 +19,7 @@ namespace vMe.Views
         private FluidKeeper fluid = new FluidKeeper();
         private EnergyKeeper energy = new EnergyKeeper();
         private StepKeeper steps = new StepKeeper();
+        private RobotState state = new RobotState();
 
         int loop = 0;
         int step = 1;
@@ -60,37 +61,8 @@ namespace vMe.Views
                 int oldbattery = energy.OldRobotEnergy;
                 int fluidCount = fluid.FluidCount;
                 int stepCount = steps.RobotCounts;
-                bool lowPower = false;
-                bool lowFluid = false;
-                bool lowSteps = false;
 
-
-                if (battery <= 50)
-                {
-                    lowPower = true;
-                    robotSprite.Source = "lowPower_robot";
-
-                }
-
-                if (fluidCount <= 50)
-                {
-                    lowFluid = true;
-                    robotSprite.Source = "lowWater_robot";
-                }
-
-                if (stepCount <= 1000)
-                {
-                    lowSteps = true;
-                    robotSprite.Source = "steps_robot";
-                }
-
-                if (lowFluid && lowPower && lowSteps)
-                {
-                    robotSprite.Source = "sad_robot";
-                }else if (!lowFluid && !lowPower && !lowSteps)
-                {
-                    robotSprite.Source = "happy_robot";
-                }
+                robotSprite.Source = state.RobotSprite(state.ActivityState(battery, "power"), state.ActivityState(fluidCount, "fluid"), state.ActivityState(stepCount, "step"));
 
                 Console.WriteLine("Battery: " + battery + " OldBattery: " + oldbattery);
 

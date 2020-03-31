@@ -2,10 +2,12 @@
 using vMe.Views;
 using Xamarin.Forms;
 
+//Step Storage
 namespace vMe.Services
 {
     public partial class StepKeeper 
     {
+        //Key for storage
         const string stepKey = "robotSteps";
 
         public StepKeeper()
@@ -14,38 +16,26 @@ namespace vMe.Services
         }
 
         public int RobotCounts
-        {
-            
+        {            
             get
             {
-
                 if (Application.Current.Properties.ContainsKey(stepKey))
-                {
-                    Console.WriteLine("Get steps " + (int)Application.Current.Properties[stepKey]);
+                {                    
                     return (int)Application.Current.Properties[stepKey];
-
-
                 }
                 else
-                {
-                    Console.WriteLine("Get 0 steps ");
+                {                    
                     return 0;
                 }
             }
 
             set
-            {
-                Console.WriteLine("Add steps " + value);
-                Application.Current.Properties[stepKey] = value;         
-
-
-                
+            {              
+                Application.Current.Properties[stepKey] = value;
             }
         }
 
-        public void GetSteps()
-        {
-        }
+        
 
     }
 }

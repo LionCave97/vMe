@@ -12,6 +12,7 @@ namespace vMe.Views
         private FluidKeeper fluidK = new FluidKeeper();
         private StepKeeper stepK = new StepKeeper();
         private EnergyKeeper energyK = new EnergyKeeper();
+        private RobotState state = new RobotState();
 
         private static Timer timer;
 
@@ -27,32 +28,7 @@ namespace vMe.Views
         {
             int battery = energyK.RobotEnergy;
             int fluidCount = fluidK.FluidCount;
-            int stepCount = stepK.RobotCounts;
-            bool lowPower = false;
-            bool lowFluid = false;
-            bool lowSteps = false;
-
-            var state = "happy";
-
-            if (battery <= 50)
-            {
-                lowPower = true;
-
-            }
-
-
-            if (fluidCount <= 50)
-            {
-                lowFluid = true;
-            }
-
-            if (stepCount <= 1000)
-            {
-                lowSteps = true;
-            }
-
-            
-
+            int stepCount = stepK.RobotCounts;          
 
             MainThread.BeginInvokeOnMainThread(() =>
             {
@@ -60,13 +36,15 @@ namespace vMe.Views
             step.Text = "Steps: " + stepK.RobotCounts.ToString() + " out of 10000";
             energy.Text = "Energy: " + energyK.RobotEnergy.ToString() + "%" ;
 
-                if (lowFluid || lowPower || lowSteps)
+                robotSprite.Source = state.RobotSprite(state.ActivityState(battery, "power"), state.ActivityState(fluidCount, "fluid"), state.ActivityState(stepCount, "step"));
+
+                if (state.ActivityState(fluidCount, "fluid") || state.ActivityState(battery, "power") || state.ActivityState(stepCount, "step"))
                 {
-                    robotSprite.Source = "sad_robot";
+                    RobotState.Text = "I am not happy";
                 }
                 else
                 {
-                    robotSprite.Source = "heppy_robot";
+                    RobotState.Text = "I am feeling good";
                 }
             });
 

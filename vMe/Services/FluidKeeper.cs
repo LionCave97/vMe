@@ -3,7 +3,7 @@ using Xamarin.Forms;
 using vMe.Views;
 using vMe.Services;
 using System.Timers;
-
+//Fluid Storage
 namespace vMe.Services
 {
     public class FluidKeeper
@@ -17,7 +17,7 @@ namespace vMe.Services
         {
 
         }            
-
+        //Fluid state
         public int FluidCount
         {
             get
@@ -50,6 +50,7 @@ namespace vMe.Services
             }
         }
 
+        //Fluid reset on new day
         public void getFluid()
         {
             int fluid = FluidCount;
@@ -68,7 +69,7 @@ namespace vMe.Services
             }
             StartTime();
         }
-
+        
         private void StartTime()
         {
             timer = new Timer();

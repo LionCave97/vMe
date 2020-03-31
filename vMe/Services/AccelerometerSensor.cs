@@ -61,6 +61,7 @@ namespace vMe.Services
 
                 return running;
             }
+
             //This will Toggle the Accelerometer On or Off
             public void ToggleAccelerometer()
             {

@@ -4,10 +4,10 @@ using vMe.Views;
 using vMe.Services;
 using System.Timers;
 using Xamarin.Essentials;
-
+//Energy storage
 namespace vMe.Services
 {
-    class EnergyKeeper
+    public partial class EnergyKeeper
     {
         const string energyKey = "robotEnergy";
         const string OldenergyKey = "oldrobotEnergy";
@@ -18,7 +18,8 @@ namespace vMe.Services
         {
             StartTime();
         }
-        
+
+        //RobotEnergy state get and set
         public int RobotEnergy 
         {
             get
@@ -57,7 +58,7 @@ namespace vMe.Services
                 Activity.UiUpdate();
             }
         }
-
+        //Stores old energy value - used for Robot charging animation
         public int OldRobotEnergy
         {
             get
@@ -84,12 +85,15 @@ namespace vMe.Services
             }
         }
 
+
+        //Decrease Energy state
         public void decreaseEnergy()
         {
             RobotEnergy -= 5;
             OldRobotEnergy = RobotEnergy;
         }
 
+        //Increase Energy state
         public void increaseEnergy()
         {
             ResetTimer();
@@ -100,12 +104,14 @@ namespace vMe.Services
             Vibration.Vibrate(duration);
         }
 
+        //Get initial energy and activates the timer
         public void getEnergy()
         {
             ResetTimer();
             Console.WriteLine("getEnergy");
         }
 
+        //Timers used to decrease Energy states
         private void StartTime()
         {
             timer = new Timer();
