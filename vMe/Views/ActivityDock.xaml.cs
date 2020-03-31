@@ -83,6 +83,7 @@ namespace vMe.Views
             {
                 //Do not delete! this runs the stepCounter!
                 Console.WriteLine(DependencyService.Get<PedometerSensor>().GetPedometer().ToString());
+
                 //Battery/Energy Ui Update
                 int battery = energy.RobotEnergy;
                 string sBatteryCount = battery.ToString();
