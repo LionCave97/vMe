@@ -1,6 +1,12 @@
+<img src="https://github.com/LeoKuyper/vMe/blob/master/vMe.Android/Resources/drawable/Logo.png" width="200" height="200" />
+
 # vMe
 
 This is a project that aims to assist you to say healthy.
+
+It uses the Accleromter to recharge the Robot.
+It uses the Pedometer of the devices to track the user activity.
+It the also check the daily water consumption.
 
 ## Getting Started
 
@@ -24,12 +30,24 @@ Use `Open Workspace` in Visual Studio.
 
 ## Unit Tests
 
-These are the unit tests that can be run on this system
+The Unit tests included will test the state systems
+
+### RobotStateCheck()
+
+This test checks if Robot State is according to the Activity state.
+
+### ActivityStateCheck()
+
+This checks if the Activity State return as expected.
+
+### IconStateCheck()
+
+This tests if the Icon State is correct according to the values of the Activity State
 
 ## Built With
 
 * [Xamarin Forms](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/)
-* [Xamarin Essential] (https://docs.microsoft.com/en-us/xamarin/essentials/)
+* [Xamarin Essential](https://docs.microsoft.com/en-us/xamarin/essentials/)
 
 ## Contributing
 
@@ -52,6 +70,8 @@ See also the list of [contributors](https://github.com/your/project/contributors
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
 ## Acknowledgments
-*Thanks MikeCodesDotNET for https://github.com/MikeCodesDotNET/My-StepCounter
-*Thanks for all the Open Source projects!
+
+* Thanks MikeCodesDotNET for https://github.com/MikeCodesDotNET/My-StepCounter
+* Thank CrossGeeks for https://github.com/CrossGeeks/DeviceSensorsPlugin
+* Thanks for all the Open Source projects!
 
