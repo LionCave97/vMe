@@ -148,31 +148,31 @@
       <Generator>
       </Generator>
     </AndroidResource>
-    <AndroidResource Include="Resources\drawable\waterDrop.png">
+    <AndroidResource Include="Resources\drawable\water.png">
       <SubType>
       </SubType>
       <Generator>
       </Generator>
     </AndroidResource>
-    <AndroidResource Include="Resources\drawable-hdpi\waterDrop.png">
+    <AndroidResource Include="Resources\drawable-hdpi\water.png">
       <SubType>
       </SubType>
       <Generator>
       </Generator>
     </AndroidResource>
-    <AndroidResource Include="Resources\drawable-xhdpi\waterDrop.png">
+    <AndroidResource Include="Resources\drawable-xhdpi\water.png">
       <SubType>
       </SubType>
       <Generator>
       </Generator>
     </AndroidResource>
-    <AndroidResource Include="Resources\drawable-xxhdpi\waterDrop.png">
+    <AndroidResource Include="Resources\drawable-xxhdpi\water.png">
       <SubType>
       </SubType>
       <Generator>
       </Generator>
     </AndroidResource>
-    <AndroidResource Include="Resources\drawable-xxxhdpi\waterDrop.png">
+    <AndroidResource Include="Resources\drawable-xxxhdpi\water.png">
       <SubType>
       </SubType>
       <Generator>

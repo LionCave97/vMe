@@ -107,12 +107,6 @@
     <ImageAsset Include="Assets.xcassets\idle_robot.imageset\idle_robot-2.png">
       <Visible>false</Visible>
     </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\waterDrop.imageset\Contents.json">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\waterDrop.imageset\waterDrop-1.png">
-      <Visible>false</Visible>
-    </ImageAsset>
     <ImageAsset Include="Assets.xcassets\runningMan.imageset\Contents.json">
       <Visible>false</Visible>
     </ImageAsset>
@@ -326,12 +320,6 @@
     <ImageAsset Include="Assets.xcassets\battery.imageset\battery-1.png">
       <Visible>false</Visible>
     </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\waterDrop.imageset\waterDrop-3.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\waterDrop.imageset\waterDrop-2.png">
-      <Visible>false</Visible>
-    </ImageAsset>
     <BundleResource Include="Resources\splash.png" />
     <ImageAsset Include="Assets.xcassets\runningMan10.imageset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\runningMan10.imageset\runningMan10.png" />
@@ -364,6 +352,18 @@
     <ImageAsset Include="Assets.xcassets\charging2_robot.imageset\charging2_robot.png" />
     <ImageAsset Include="Assets.xcassets\charging2_robot.imageset\charging2_robot-1.png" />
     <ImageAsset Include="Assets.xcassets\charging2_robot.imageset\charging2_robot-2.png" />
+    <ImageAsset Include="Assets.xcassets\water.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\water.imageset\waterDrop-1.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\water.imageset\waterDrop-2.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\water.imageset\waterDrop-3.png">
+      <Visible>false</Visible>
+    </ImageAsset>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -387,7 +387,6 @@
   <ItemGroup>
     <Folder Include="Assets.xcassets\Logo.imageset\" />
     <Folder Include="Assets.xcassets\idle_robot.imageset\" />
-    <Folder Include="Assets.xcassets\waterDrop.imageset\" />
     <Folder Include="Assets.xcassets\runningMan.imageset\" />
     <Folder Include="Assets.xcassets\battery.imageset\" />
     <Folder Include="Assets.xcassets\water10.imageset\" />
@@ -410,5 +409,6 @@
     <Folder Include="Assets.xcassets\steps_robot.imageset\" />
     <Folder Include="Assets.xcassets\charging1_robot.imageset\" />
     <Folder Include="Assets.xcassets\charging2_robot.imageset\" />
+    <Folder Include="Assets.xcassets\water.imageset\" />
   </ItemGroup>
 </Project>

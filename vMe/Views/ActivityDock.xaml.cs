@@ -63,11 +63,6 @@ namespace vMe.Views
             runningLevel.WidthRequest = width3;
             batteryLevel.WidthRequest = width3;
 
-            width3 -= 15;
-            waterDropPic.WidthRequest = width3;
-            runningManPic.WidthRequest = width3;
-            batteryPic.WidthRequest = width3;
-
             heightActive = (int)Math.Round(height);
             var h = height * 0.25;
             Console.WriteLine(heightActive);
@@ -86,6 +81,8 @@ namespace vMe.Views
         {      
             MainThread.BeginInvokeOnMainThread(() =>
             {
+                //Do not delete! this runs the stepCounter!
+                Console.WriteLine(DependencyService.Get<PedometerSensor>().GetPedometer().ToString());
                 //Battery/Energy Ui Update
                 int battery = energy.RobotEnergy;
                 string sBatteryCount = battery.ToString();
@@ -123,9 +120,12 @@ namespace vMe.Views
                 int fluidCount = fluid.FluidCount;
                 string sFluidCount = fluidCount.ToString();
                 waterLabel.Text = "You have drink " + sFluidCount + "% of your daily intake";
+
+                waterDropPic.Source = "water" + state.IconState(fluidCount, "null");
+
                 if (fluidCount >= 5)
                 {
-                    waterDropPic.Source = "waterDrop";
+                    waterLabel.Text = "You have drink " + sFluidCount + "% of your daily intake. I feel a bit thirsty at this stage.";
                 }
                 if (fluidCount >= 10)
                 {
@@ -149,7 +149,6 @@ namespace vMe.Views
                     waterLabel.Text = "You have drink " + sFluidCount + "% of your daily intake. I think that may be enough for now.";
                 }
 
-                waterDropPic.Source = "water" + state.IconState(fluidCount, "null");
 
                 waterDropPic.Margin = new Thickness(12, 40, 0, 20);
                 waterDropPic.WidthRequest = -1;
@@ -184,7 +183,7 @@ namespace vMe.Views
                 waterLevel.IsVisible = true;
                 runningLevel.IsVisible = false;
                 batteryLevel.IsVisible = false;
-                waterLevel.WidthRequest = widthActive - 20;
+                waterLevel.WidthRequest = widthActive;
 
                 waterLevel.RaiseChild(waterDropPic);
                 waterLabel.IsVisible = true;
@@ -220,7 +219,7 @@ namespace vMe.Views
                 waterLevel.IsVisible = false;
                 runningLevel.IsVisible = true;
                 batteryLevel.IsVisible = false;
-                runningLevel.WidthRequest = widthActive - 20;
+                runningLevel.WidthRequest = widthActive;
 
                 runningLevel.RaiseChild(waterDropPic);
                 runningLabel.IsVisible = true;
@@ -253,7 +252,7 @@ namespace vMe.Views
                 waterLevel.IsVisible = false;
                 runningLevel.IsVisible = false;
                 batteryLevel.IsVisible = true;
-                batteryLevel.WidthRequest = widthActive - 20;
+                batteryLevel.WidthRequest = widthActive;
 
                 batteryLevel.RaiseChild(waterDropPic);
                 batteryLabel.IsVisible = true;

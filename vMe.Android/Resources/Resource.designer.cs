@@ -5860,19 +5860,19 @@ namespace vMe.Droid
 			public const int tooltip_frame_light = 2131165322;
 			
 			// aapt resource value: 0x7F07008B
-			public const int water10 = 2131165323;
+			public const int water = 2131165323;
 			
 			// aapt resource value: 0x7F07008C
-			public const int water100 = 2131165324;
+			public const int water10 = 2131165324;
 			
 			// aapt resource value: 0x7F07008D
-			public const int water50 = 2131165325;
+			public const int water100 = 2131165325;
 			
 			// aapt resource value: 0x7F07008E
-			public const int water80 = 2131165326;
+			public const int water50 = 2131165326;
 			
 			// aapt resource value: 0x7F07008F
-			public const int waterDrop = 2131165327;
+			public const int water80 = 2131165327;
 			
 			// aapt resource value: 0x7F070090
 			public const int xamarin_logo = 2131165328;

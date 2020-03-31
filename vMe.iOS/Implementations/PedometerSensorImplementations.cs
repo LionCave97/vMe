@@ -22,6 +22,7 @@ namespace vMe.iOS.Implementations
         //Checks if Pedometer is availible
         public DeviceSteps GetPedometer()
         {
+
             Getsteps();
             stepCounter.StartStepCountingUpdates(_queue, 1, Updater);
             return DeviceSteps.Still;
@@ -35,6 +36,7 @@ namespace vMe.iOS.Implementations
         //Get steps of today
         public void Getsteps()
         {
+            Console.WriteLine("Get todays steps");
             if (_resetTime.Date.Day != DateTime.Now.Date.Day)
             {
                 _resetTime = DateTime.Today; //Forces update as the day may have changed.
@@ -56,6 +58,7 @@ namespace vMe.iOS.Implementations
             if (steps.RobotCounts != (Int32)stepCount)
             {
                 steps.RobotCounts = (Int32)stepCount;
+                Console.WriteLine("iOS Steps "+(Int32)stepCount);
 
                 var Activity = new ActivityDock();
                 Activity.UiUpdate();

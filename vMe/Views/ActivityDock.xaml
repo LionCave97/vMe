@@ -24,7 +24,7 @@
                                    x:Name="waterLevel">
                        <ImageButton Source="waterDrop" x:Name="waterDropPic"
                               VerticalOptions="CenterAndExpand"
-                              HorizontalOptions="CenterAndExpand"
+                              HorizontalOptions="EndAndExpand"
                               Margin="5, 25, 5, 25" BackgroundColor="Transparent" Clicked="waterTapped" >
                               </ImageButton>
                        <StackLayout x:Name="waterMenu" VerticalOptions="End"
@@ -43,7 +43,7 @@
                                    x:Name="runningLevel">
                        <ImageButton Source="runningMan"
                               VerticalOptions="CenterAndExpand" x:Name="runningManPic"
-                              HorizontalOptions="CenterAndExpand"
+                              HorizontalOptions="EndAndExpand"
                               Margin="5, 30, 5, 20" BackgroundColor="Transparent"  Clicked="runningTapped">
                               </ImageButton>
                        <StackLayout x:Name="runningMenu" VerticalOptions="End"
@@ -60,7 +60,7 @@
                                    x:Name="batteryLevel">
                        <ImageButton Source="battery"
                               VerticalOptions="CenterAndExpand" x:Name="batteryPic"
-                              HorizontalOptions="CenterAndExpand"
+                              HorizontalOptions="EndAndExpand"
                               Margin="15, 10, 5, 0" BackgroundColor="Transparent" Clicked="batteryTapped" Scale="1.2">
                               </ImageButton>
                        <StackLayout x:Name="batteryMenu" VerticalOptions="End"
