@@ -70,7 +70,8 @@ See also the list of [contributors](https://github.com/your/project/contributors
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
 ## Acknowledgments
-*Thanks MikeCodesDotNET for https://github.com/MikeCodesDotNET/My-StepCounter
-*Thank CrossGeeks for https://github.com/CrossGeeks/DeviceSensorsPlugin
-*Thanks for all the Open Source projects!
+
+* Thanks MikeCodesDotNET for https://github.com/MikeCodesDotNET/My-StepCounter
+* Thank CrossGeeks for https://github.com/CrossGeeks/DeviceSensorsPlugin
+* Thanks for all the Open Source projects!
 
