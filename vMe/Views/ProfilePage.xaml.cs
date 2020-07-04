@@ -83,8 +83,8 @@ namespace vMe.Views
 
             Console.WriteLine(heightSet1);
 
-            robotSprite.HeightRequest = heightSet1;
-            details.HeightRequest = heightSet2;
+            //robotSprite.HeightRequest = heightSet1;
+            //details.HeightRequest = heightSet2;
         }
 
 

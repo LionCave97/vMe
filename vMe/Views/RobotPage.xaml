@@ -1,15 +1,24 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:vMe.Views"
-             x:Class="vMe.Views.RobotPage">
+             x:Class="vMe.Views.RobotPage" xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView">
     <ContentPage.Content>
         <StackLayout BackgroundColor="#2e86ab">
-        <StackLayout VerticalOptions="EndAndExpand" HorizontalOptions="FillAndExpand" Padding="0" Margin="0, 0, 0, 10">
+        <StackLayout VerticalOptions="EndAndExpand" HorizontalOptions="FillAndExpand" Padding="0" Margin="0, 0, 0, 0">
             <Image Source="idle_robot" VerticalOptions="CenterAndExpand"
                    HeightRequest="200" x:Name="robotSprite" ></Image>
 
         </StackLayout>
+            <yummy:PancakeView
+
+            BackgroundColor="#2d3047" 
+            CornerRadius="32,32,32,32"
+            HasShadow="True"
+            VerticalOptions="CenterAndExpand">
+
             <local:ActivityDock></local:ActivityDock>
+
+            </yummy:PancakeView>
     </StackLayout>
     </ContentPage.Content>
 </ContentPage>
