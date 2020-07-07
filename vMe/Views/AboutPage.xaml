@@ -58,7 +58,7 @@
                     </Label.FormattedText>
                 </Label>
 
-                <!--<Button Text="Dev Reset" Clicked="Button_Clicked"></Button>-->
+                <Button Text="Dev Reset" Clicked="Button_Clicked"></Button>
 
             </StackLayout>
            </yummy:PancakeView>

@@ -70,8 +70,11 @@ namespace vMe.Views
 
             dockContainer.HeightRequest = h;
             waterLevel.HeightRequest = h;
+            waterLevelCon.HeightRequest = h;
             runningLevel.HeightRequest = h;
+            runningLevelCon.HeightRequest = h;
             batteryLevel.HeightRequest = h;
+            batteryLevelCon.HeightRequest = h;
             FastStartTime();
         }
 
@@ -151,8 +154,13 @@ namespace vMe.Views
                 }
 
 
+                //waterDropPic.Margin = new Thickness(1, 30, 1, 25);
                 waterDropPic.Margin = new Thickness(12, 40, 0, 20);
                 waterDropPic.WidthRequest = -1;
+                waterLevel.RaiseChild(waterDropPic);
+
+
+
             });
         }       
 
@@ -172,7 +180,7 @@ namespace vMe.Views
                 runningLevel.IsVisible = true;
                 batteryLevel.IsVisible = true;
 
-                waterLevel.LowerChild(waterDropPic);
+                //waterLevel.LowerChild(waterDropPic);
                 waterLabel.IsVisible = false;
                 waterButton.IsVisible = false;
             }
@@ -189,9 +197,6 @@ namespace vMe.Views
                 waterLevel.RaiseChild(waterDropPic);
                 waterLabel.IsVisible = true;
                 waterButton.IsVisible = true;
-
-
-
             }
         }
 
