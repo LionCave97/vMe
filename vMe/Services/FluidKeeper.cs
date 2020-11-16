@@ -82,7 +82,7 @@ namespace vMe.Services
         }
         private void updateTimedData(object sender, ElapsedEventArgs e)
         {
-            Console.WriteLine("TimeLoop");
+            Console.WriteLine("Fluid Time");
             getFluid();
 
         }

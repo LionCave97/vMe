@@ -56,7 +56,7 @@ namespace vMe.Services
 
             if (str == "step")
             {
-                if (val <= 1000)
+                if (val <= 100)
                 {
                     low = true;
                 }

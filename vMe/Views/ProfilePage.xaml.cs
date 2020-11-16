@@ -28,15 +28,24 @@ namespace vMe.Views
         //Updates the whole ProfilePage
         public void Update()
         {
+            var demo = false;
+
             int battery = energyK.RobotEnergy;
             int fluidCount = fluidK.FluidCount;
-            int stepCount = stepK.RobotCounts;          
+            int stepCount = stepK.RobotCounts;
+
+            if (demo)
+            {
+                battery = 100;
+                fluidCount = 100;
+                stepCount = 10000;
+            }
 
             MainThread.BeginInvokeOnMainThread(() =>
             {
-            fluid.Text = "Fluid: " + fluidK.FluidCount.ToString() + "%";
-            step.Text = "Steps: " + stepK.RobotCounts.ToString() + " out of 10000";
-            energy.Text = "Energy: " + energyK.RobotEnergy.ToString() + "%" ;
+            fluid.Text = "Fluid: " + fluidCount.ToString() + "%";
+            step.Text = "Steps: " + stepCount.ToString() + " out of 10000";
+            energy.Text = "Energy: " + battery.ToString() + "%" ;
 
                 robotSprite.Source = state.RobotSprite(state.ActivityState(battery, "power"), state.ActivityState(fluidCount, "fluid"), state.ActivityState(stepCount, "step"));
 

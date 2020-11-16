@@ -52,27 +52,37 @@ namespace vMe.Views
         public void Setup()
         {
             var mainDisplayInfo = DeviceDisplay.MainDisplayInfo;
-            var width = mainDisplayInfo.Width / mainDisplayInfo.Density;
-            var height = mainDisplayInfo.Height / mainDisplayInfo.Density;
+            var width = mainDisplayInfo.Width;
+            var height = mainDisplayInfo.Height;
 
             dockContainer.WidthRequest = width;
             widthActive = (int)Math.Round(width);
             width3 = width / 3;
             width3 -= 15;
+            Console.WriteLine("Screen width " + widthActive);
+            Console.WriteLine("Section width " + width3);
+
             waterLevel.WidthRequest = width3;
+            waterDropPic.WidthRequest = width3 - 10;
+
             runningLevel.WidthRequest = width3;
+
             batteryLevel.WidthRequest = width3;
 
             heightActive = (int)Math.Round(height);
-            var h = height * 0.25;
-            Console.WriteLine(heightActive);
-            Console.WriteLine(h);
+            var h = heightActive / 12;
+
+            Console.WriteLine("Screen height " + heightActive);
+            Console.WriteLine("Section height " + h);
 
             dockContainer.HeightRequest = h;
+
             waterLevel.HeightRequest = h;
             waterLevelCon.HeightRequest = h;
+            
             runningLevel.HeightRequest = h;
             runningLevelCon.HeightRequest = h;
+
             batteryLevel.HeightRequest = h;
             batteryLevelCon.HeightRequest = h;
             FastStartTime();
@@ -84,11 +94,18 @@ namespace vMe.Views
         {      
             MainThread.BeginInvokeOnMainThread(() =>
             {
+                var demo = false;
+
                 //Do not delete! this runs the stepCounter!
                 Console.WriteLine(DependencyService.Get<PedometerSensor>().GetPedometer().ToString());
 
                 //Battery/Energy Ui Update
-                int battery = energy.RobotEnergy;
+                 int battery = energy.RobotEnergy;
+                if (demo)
+                {
+                    battery = 100;
+                }
+                
                 string sBatteryCount = battery.ToString();
                 
                 if (battery >= 5)
@@ -102,11 +119,15 @@ namespace vMe.Views
 
                 batteryPic.Source = "battery"+state.IconState(battery, "null");
 
-                batteryPic.Margin = new Thickness(12, 40, 0, 20);
+                batteryPic.Margin = new Thickness(12, 20, 0, 20);
                 batteryPic.WidthRequest = -1;
 
                 //Steps Ui Update
                 int stepCount = steps.RobotCounts;
+                if (demo)
+                {
+                    stepCount = 10000;
+                }
                 string stepCounts = stepCount.ToString();
                 Console.WriteLine("Steps taken " + stepCounts);
                                 
@@ -122,6 +143,10 @@ namespace vMe.Views
 
                 //Fluid Ui Update
                 int fluidCount = fluid.FluidCount;
+                if (demo)
+                {
+                    fluidCount = 100;
+                }
                 string sFluidCount = fluidCount.ToString();
                 waterLabel.Text = "You have drink " + sFluidCount + "% of your daily intake";
 
@@ -153,14 +178,11 @@ namespace vMe.Views
                     waterLabel.Text = "You have drink " + sFluidCount + "% of your daily intake. I think that may be enough for now.";
                 }
 
-
                 //waterDropPic.Margin = new Thickness(1, 30, 1, 25);
                 waterDropPic.Margin = new Thickness(12, 40, 0, 20);
+                waterDropPic.Margin = new Thickness(0, 0, 5, 5);
                 waterDropPic.WidthRequest = -1;
                 waterLevel.RaiseChild(waterDropPic);
-
-
-
             });
         }       
 
@@ -180,7 +202,7 @@ namespace vMe.Views
                 runningLevel.IsVisible = true;
                 batteryLevel.IsVisible = true;
 
-                //waterLevel.LowerChild(waterDropPic);
+                waterLevel.LowerChild(waterDropPic);
                 waterLabel.IsVisible = false;
                 waterButton.IsVisible = false;
             }
@@ -288,8 +310,10 @@ namespace vMe.Views
             timer.Start();
 
         }
+
         private void updateFast(object sender, ElapsedEventArgs e)
         {
+            Console.WriteLine("Main Time");
             UiUpdate();
 
         }

@@ -62,10 +62,20 @@ namespace vMe.Views
         {
             MainThread.BeginInvokeOnMainThread(() =>
             {
+                var demo = false;
                 int battery = energy.RobotEnergy;
                 int oldbattery = energy.OldRobotEnergy;
                 int fluidCount = fluid.FluidCount;
                 int stepCount = steps.RobotCounts;
+
+                if (demo)
+                {
+                    battery = 100;
+                    oldbattery = 100;
+                    fluidCount = 100;
+                    stepCount = 10000;
+                }
+                
 
                 robotSprite.Source = state.RobotSprite(state.ActivityState(battery, "power"), state.ActivityState(fluidCount, "fluid"), state.ActivityState(stepCount, "step"));
 

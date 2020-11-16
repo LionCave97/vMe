@@ -16,7 +16,7 @@ namespace vMe.Services
 
         public EnergyKeeper()
         {
-            StartTime();
+            //StartTime();
         }
 
         //RobotEnergy state get and set
@@ -120,27 +120,34 @@ namespace vMe.Services
             timer.Enabled = true;
             timer.Elapsed += updateTimedData;
             timer.Start();
-            Console.WriteLine("Timer started");
+            Console.WriteLine("Energy Timer started");
 
         }
 
         private void ResetTimer()
         {
+            Console.WriteLine("Reset Timer");
             timeKeeper.StartTime = DateTime.Now;
+            //timer.Stop();
+            //timer.Dispose();
+            //timer = null;
 
-            StartTime();
+            //StartTime();
         }
 
         private void updateTimedData(object sender, ElapsedEventArgs e)
         {
             TimeSpan timeElapsed = e.SignalTime - timeKeeper.StartTime;
             double sec = timeElapsed.TotalSeconds;
+            Console.WriteLine(sec + " Time");
 
             if (sec > 60)
             {
-                Console.WriteLine("Fired");
+                
+                Console.WriteLine("Energy Time");
                 decreaseEnergy();
                 ResetTimer();
+
             }
             
         }

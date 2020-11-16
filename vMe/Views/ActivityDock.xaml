@@ -1,101 +1,91 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentView xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="vMe.Views.ActivityDock" xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView">
     <ContentView.Content>        
-        <StackLayout 
-                     HeightRequest="180" Padding="0" 
-                     BackgroundColor="#2d3047" HorizontalOptions="End"  x:Name="dockContainer">
+        <FlexLayout Direction="Row"
+                AlignItems="Start"
+                JustifyContent="Center" x:Name="dockContainer"
+                    Margin="0,10,0,0">              
                
-               <Grid>
-                  <Grid.RowDefinitions>
-                    <RowDefinition Height="*" />
-                  </Grid.RowDefinitions>
-                  <Grid.ColumnDefinitions>
-                      <ColumnDefinition Width="auto" />
-                      <ColumnDefinition Width="auto" />
-                      <ColumnDefinition Width="auto" />
-                  </Grid.ColumnDefinitions>
 
                    <yummy:PancakeView                    
-                    CornerRadius="32,32,32,32"
+                    CornerRadius="32,0,32,0"
                     HasShadow="True"
                     VerticalOptions="CenterAndExpand"
-                    Margin="15"
-                      Grid.Row="0" Grid.Column="0" x:Name="waterLevel" >
+                    Margin="5" x:Name="waterLevel" >
 
-                   <RelativeLayout BackgroundColor="#F2E74B" x:Name="waterLevelCon" VerticalOptions="CenterAndExpand" HeightRequest="160" >
+                   <FlexLayout Direction="Row"  BackgroundColor="#F2E74B" x:Name="waterLevelCon" VerticalOptions="CenterAndExpand" HeightRequest="160" >
 
-                   <ImageButton Source="waterDrop"  x:Name="waterDropPic"
-                              VerticalOptions="CenterAndExpand"
-                              HorizontalOptions="EndAndExpand"
-                              Margin="12, 40, 0, 20" BackgroundColor="#F2E74B"  Clicked="waterTapped" Scale="1.2">
+                   <ImageButton Source="water"  x:Name="waterDropPic"
+                              VerticalOptions="Start"
+                              HorizontalOptions="Start"
+                              BackgroundColor="#Transparent" Clicked="waterTapped" Margin="0,0,5,5" Padding="5">
                    </ImageButton>
 
                        <StackLayout x:Name="waterMenu" VerticalOptions="End"
                                        HorizontalOptions="EndAndExpand" >
                            <Label IsVisible="false" x:Name="waterLabel"
-                                  Text="You need to drink more water" WidthRequest="180"
-                                  Margin="120, 30, 1, 0"  ></Label>
+                                  Text="You need to drink more water" 
+                                  Margin="30, 40, 10, 0"></Label>
                            <Button IsVisible="false" x:Name="waterButton"
-                                   Text="Drink a glass Water" WidthRequest="200"
-                                   Margin="100, 0, 10, 15" 
+                                   Text="Drink a glass Water" 
+                                   Margin="0, 0, 5, 30" 
                                    Clicked="drinkWaterTapped"></Button>
                        </StackLayout>
-                   </RelativeLayout>
+
+                   </FlexLayout>
                    </yummy:PancakeView>
 
                    <yummy:PancakeView                    
-                    CornerRadius="32,32,32,32"
+                    CornerRadius="0,0,0,0"
                     HasShadow="True"
-                    VerticalOptions="CenterAndExpand"
-                    Margin="15"
-                   Grid.Row="0" Grid.Column="1" x:Name="runningLevel">
+                    VerticalOptions="CenterAndExpand" 
+                    Margin="5" x:Name="runningLevel">
 
-                   <RelativeLayout BackgroundColor="#ff220c" x:Name="runningLevelCon" VerticalOptions="CenterAndExpand" HeightRequest="160"
+                   <FlexLayout BackgroundColor="#ff220c" x:Name="runningLevelCon" Direction="Row" VerticalOptions="CenterAndExpand" HeightRequest="160"
                                    >
                        <ImageButton Source="runningMan"
-                              VerticalOptions="CenterAndExpand" x:Name="runningManPic"
-                              HorizontalOptions="EndAndExpand"
-                              Margin="5, 30, 5, 20" BackgroundColor="Transparent"  Clicked="runningTapped">
-                              </ImageButton>
+                              x:Name="runningManPic"
+                               VerticalOptions="Start"
+                              HorizontalOptions="Start"                                   
+                               BackgroundColor="Transparent"  Clicked="runningTapped" Margin="0,0,5,5" Padding="5">
+                       </ImageButton>
                        <StackLayout x:Name="runningMenu" VerticalOptions="End"
                                        HorizontalOptions="EndAndExpand" >
                            <Label IsVisible="false" x:Name="runningLabel"
                                   Text="You need to run more today" WidthRequest="200"
-                                  Margin="150, 50, 1, 15"  ></Label>
+                                  Margin="30, 40, 1, 15"  ></Label>
                            
                        </StackLayout>
-                   </RelativeLayout>
-                    </yummy:PancakeView>
+
+                   </FlexLayout>
+                   </yummy:PancakeView>
 
 
                     <yummy:PancakeView                    
-                    CornerRadius="32,32,32,32"
+                    CornerRadius="0,32,0,32"
                     HasShadow="True"
                     VerticalOptions="CenterAndExpand"
-                    Margin="15"
-                        Grid.Row="0" Grid.Column="2" x:Name="batteryLevel">
+                    Margin="5" x:Name="batteryLevel">
 
-                   <RelativeLayout BackgroundColor="#f4f1de" VerticalOptions="CenterAndExpand" HeightRequest="160"
-                                   x:Name="batteryLevelCon">
+                   <FlexLayout BackgroundColor="#f4f1de" x:Name="batteryLevelCon" Direction="Row" VerticalOptions="CenterAndExpand" HeightRequest="170">
                        <ImageButton Source="battery"
-                              VerticalOptions="CenterAndExpand" x:Name="batteryPic"
-                              HorizontalOptions="EndAndExpand"
-                              Margin="15, 10, 5, 0" BackgroundColor="Transparent" Clicked="batteryTapped" Scale="1.1">
-                              </ImageButton>
+                              x:Name="batteryPic"
+                              VerticalOptions="Start"
+                              HorizontalOptions="Start"
+                               BackgroundColor="Transparent" Clicked="batteryTapped" Margin="0,0,5,5" Padding="5">
+                       </ImageButton>
                        <StackLayout x:Name="batteryMenu" VerticalOptions="End"
                                        HorizontalOptions="EndAndExpand" >
                            <Label IsVisible="false" x:Name="batteryLabel"
                                   Text="Battery is running low" WidthRequest="200"
-                                  Margin="150, 50, 1, 15" ></Label>
+                                  Margin="30, 40, 1, 15" ></Label>
                            
                        </StackLayout>
-                   </RelativeLayout>
-                     </yummy:PancakeView>
 
-                </Grid>
-
+                   </FlexLayout>
+                   </yummy:PancakeView>
 
 
-        </StackLayout>
+        </FlexLayout>
     </ContentView.Content>
 </ContentView>

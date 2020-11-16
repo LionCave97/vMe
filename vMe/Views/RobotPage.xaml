@@ -9,16 +9,19 @@
                    HeightRequest="200" x:Name="robotSprite" ></Image>
 
         </StackLayout>
+            <StackLayout VerticalOptions="End" BackgroundColor="#111517">
             <yummy:PancakeView
 
             BackgroundColor="#2d3047" 
-            CornerRadius="32,32,32,32"
+            CornerRadius="32,32,0,0"
             HasShadow="True"
             VerticalOptions="CenterAndExpand">
+            
 
             <local:ActivityDock></local:ActivityDock>
 
             </yummy:PancakeView>
+            </StackLayout>
     </StackLayout>
     </ContentPage.Content>
 </ContentPage>

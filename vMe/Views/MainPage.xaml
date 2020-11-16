@@ -5,14 +5,17 @@
     </MasterDetailPage.Master>
     <MasterDetailPage.Detail>
         <NavigationPage>
+
+            <x:Arguments>
+                <views:RobotPage />
+            </x:Arguments>
+
             <NavigationPage.Icon>
                 <OnPlatform x:TypeArguments="FileImageSource">
                     <On Platform="iOS" Value="tab_feed.png" />
                 </OnPlatform>
             </NavigationPage.Icon>
-            <x:Arguments>
-                <views:RobotPage />
-            </x:Arguments>
+            
         </NavigationPage>
     </MasterDetailPage.Detail>
 </MasterDetailPage>
